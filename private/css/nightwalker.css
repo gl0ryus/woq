@@ -419,23 +419,33 @@ div#aboutpage_content.mochaContent h3:nth-child(2)::after {
   color: rgb(255, 255, 255);
 }
 
-/* RATIO COLORS
+/* WOW RATIO COLORS 
 ----------------------------------------------------------------------------------------------*/
-.ratioBad {
-  color: var(--color-RatioBad);
+.RatioPoor {
+  color: var(--color-RatioPoor);
+}
+.RatioCommon {
+  color: var(--color-RatioCommon);
+}
+.RatioUncommon {
+  color: var(--color-RatioUncommon);
+}
+.RatioRare {
+  color: var(--color-RatioRare);
+}
+.RatioEpic {
+  color: var(--color-RatioEpic);
+}
+.RatioLegendary {
+  color: var(--color-RatioLegendary);
+}
+.RatioArtifact {
+  color: var(--color-RatioArtifact);
+}
+.RatioHerloom {
+  color: var(--color-RatioHerloom);
 }
 
-.ratioAlmost {
-  color: var(--color-RatioAlmost);
-}
-
-.ratioGood {
-  color: var(--color-RatioGood);
-}
-
-.ratioBest {
-  color: var(--color-RatioBest);
-}
 
 /* REMOVE UGLY DIVIDER GIF
 ----------------------------------------------------------------------------------------------*/

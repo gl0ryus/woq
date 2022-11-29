@@ -390,22 +390,31 @@ div#aboutpage_content.mochaContent h3:nth-child(2)::after {
     color: rgb(255, 255, 255);
 }
 
-/* RATIO COLORS
+/* WOW RATIO COLORS 
 ----------------------------------------------------------------------------------------------*/
-.ratioBad {
-    color: var(--color-RatioBad);
+.RatioPoor {
+  color: var(--color-RatioPoor);
 }
-
-.ratioAlmost {
-    color: var(--color-RatioAlmost);
+.RatioCommon {
+    color: var(--color-RatioCommon);
 }
-
-.ratioGood {
-    color: var(--color-RatioGood);
+.RatioUncommon {
+    color: var(--color-RatioUncommon);
 }
-
-.ratioBest {
-    color: var(--color-RatioBest);
+.RatioRare {
+    color: var(--color-RatioRare);
+}
+.RatioEpic {
+    color: var(--color-RatioEpic);
+}
+.RatioLegendary {
+    color: var(--color-RatioLegendary);
+}
+.RatioArtifact {
+    color: var(--color-RatioArtifact);
+}
+.RatioHerloom {
+    color: var(--color-RatioHerloom);
 }
 
 

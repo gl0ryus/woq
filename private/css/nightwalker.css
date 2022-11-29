@@ -409,6 +409,9 @@ input::placeholder {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
+#transferList.panel.expanded {
+  overflow-y: hidden !important;
+}
 
 /* CREDITS
 ----------------------------------------------------------------------------------------------*/

@@ -1141,7 +1141,7 @@ window.qBittorrent.DynamicTable = (function() {
                         // td.setStyle('color', '#eb3434');
                         td.set('class', 'RatioLegendary');
                         break;
-                    case (ratio > 80.0):
+                    case (ratio < 80.0):
                         // td.setStyle('color', '#eb3434');
                         td.set('class', 'RatioEpic');
                         break;

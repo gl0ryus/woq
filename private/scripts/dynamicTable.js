@@ -1132,15 +1132,15 @@ window.qBittorrent.DynamicTable = (function() {
                         // td.setStyle('color', '#40b82e');
                         td.set('class', 'RatioRare');
                         break;
-                    case (ratio < 40.0):
+                    case (ratio < 60.0):
                         // td.setStyle('color', '#eb3434');
                         td.set('class', 'RatioEpic');
                         break;
-                    case (ratio < 60.0):
+                    case (ratio < 90.0):
                         // td.setStyle('color', '#eb3434');
                         td.set('class', 'RatioLegendary');
                         break;
-                    case (ratio < 80.0):
+                    case (ratio < 100.0):
                         // td.setStyle('color', '#eb3434');
                         td.set('class', 'RatioArtifact');
                         break;

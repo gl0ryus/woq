@@ -1142,7 +1142,7 @@ window.qBittorrent.DynamicTable = (function() {
                         break;
                     case (ratio < 80.0):
                         // td.setStyle('color', '#eb3434');
-                        td.set('class', 'RatioEpic');
+                        td.set('class', 'RatioArtifact');
                         break;
                     case (ratio > 100.0):
                         console.log("Setting ratio color to Herloom");

@@ -18,24 +18,24 @@
 3. Ensure you use a trailing slash.
 
 ### Clone this repo (Linux)
-1. `sudo git clone https://github.com/gl0ryus/nightwalker.git /opt/nightwalker`
-3. `sudo chown -R nobody:nogroup /opt/nightwalker/`
+1. `sudo git clone https://github.com/gl0ryus/woq.git /opt/woq`
+3. `sudo chown -R nobody:nogroup /opt/woq/`
 
 ### Activate Alterative WebUI in qBittorrent
 1. Under `Tools->Preferences->WebUI` enable `Use alternative WebUI`.
-2. Choose a location that points to the `nightwalker` folder, i.e. `/opt/nightwalker/`
+2. Choose a location that points to the `woq` folder, i.e. `/opt/woq/`
 3. Restart qBittorrent or refresh your browser for changes to take effect.
 
 You can also change these settings via the config file. The relevant entries are:
 
 - `WebUI\AlternativeUIEnabled=true`
-- `WebUI\RootFolder=/opt/nightwalker/`
+- `WebUI\RootFolder=/opt/woq/`
 
 ### Update theme (Linux)
-1. `git -C /opt/nightwalker checkout main`
-2. `git -C /opt/nightwalker fetch origin main`
-3. `git -C /opt/nightwalker reset --hard origin/main`
-4. `sudo chown -R nobody:nogroup /opt/nightwalker`
+1. `git -C /opt/woq checkout main`
+2. `git -C /opt/woq fetch origin main`
+3. `git -C /opt/woq reset --hard origin/main`
+4. `sudo chown -R nobody:nogroup /opt/woq`
 
 ### Tested
 Based on the standard qBittorrent WebUI theme (4.3.8 release).

@@ -1118,34 +1118,34 @@ window.qBittorrent.DynamicTable = (function() {
                         // td.setStyle('color', '#eb3434');
                         td.set('class', 'RatioPoor');
                         break;
-                    case (ratio < 1.0):
+                    case (ratio < 2.0):
                         // console.log('ALMOST');
                         // td.setStyle('color', '#eb9b34');
                         td.set('class', 'RatioCommon');
                         break;
-                    case (ratio < 2.0):
+                    case (ratio < 10.0):
                         // console.log('GOOD');
                         // td.setStyle('color', '#40b82e');
                         td.set('class', 'RatioUncommon');
                         break;
-                    case (ratio < 5.0):
+                    case (ratio < 20.0):
                         // console.log('BEST');
                         // td.setStyle('color', '#40b82e');
                         td.set('class', 'RatioRare');
                         break;
-                    case (ratio < 10.0):
+                    case (ratio < 40.0):
                         // td.setStyle('color', '#eb3434');
                         td.set('class', 'RatioEpic');
                         break;
-                    case (ratio < 20.0):
+                    case (ratio < 600.0):
                         // td.setStyle('color', '#eb3434');
                         td.set('class', 'RatioLegendary');
                         break;
-                    case (ratio > 40.0):
+                    case (ratio > 80.0):
                         // td.setStyle('color', '#eb3434');
                         td.set('class', 'RatioEpic');
                         break;
-                    case (ratio >= 50.0):
+                    case (ratio >= 100.0):
                         // td.setStyle('color', '#eb3434');
                         td.set('class', 'RatioHerloom');
                         break;

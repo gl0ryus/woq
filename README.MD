@@ -1,5 +1,5 @@
 # A Dark but not black qBittorrent WebUI 
-**_A darker theme for qBittorrent WebUI_ **
+**_A darker theme for qBittorrent WebUI_**
 
 ![preview][preview]
 

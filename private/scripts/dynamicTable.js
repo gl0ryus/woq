@@ -1113,7 +1113,7 @@ window.qBittorrent.DynamicTable = (function() {
                 const ratio = this.getRowValue(row);
                 const string = (ratio === -1) ? '∞' : window.qBittorrent.Misc.toFixedPointString(ratio, 2);
                 switch (true) {
-                    case (ratio < 0.4):
+                    case (ratio < 1.0):
                         // td.setStyle('color', '#eb3434');
                         td.set('class', 'RatioPoor');
                         break;

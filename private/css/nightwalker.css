@@ -400,24 +400,31 @@ div#aboutpage_content.mochaContent h3:nth-child(2)::after {
 .RatioPoor {
   color: var(--color-RatioPoor);
 }
+
 .RatioCommon {
   color: var(--color-RatioCommon);
 }
+
 .RatioUncommon {
   color: var(--color-RatioUncommon);
 }
+
 .RatioRare {
   color: var(--color-RatioRare);
 }
+
 .RatioEpic {
   color: var(--color-RatioEpic);
 }
+
 .RatioLegendary {
   color: var(--color-RatioLegendary);
 }
+
 .RatioArtifact {
   color: var(--color-RatioArtifact);
 }
+
 .RatioHerloom {
   color: var(--color-RatioHerloom);
 }
@@ -453,7 +460,7 @@ ul.filterList a {
   display: inline;
 }
 
-#all_filter > a img {
+#all_filter>a img {
   display: none;
 }
 
@@ -468,7 +475,7 @@ ul.filterList a {
   padding-left: 5px;
 }
 
-#downloading_filter > a img {
+#downloading_filter>a img {
   display: none;
 }
 
@@ -483,7 +490,7 @@ ul.filterList a {
   padding-left: 5px;
 }
 
-#seeding_filter > a img {
+#seeding_filter>a img {
   display: none;
 }
 
@@ -498,7 +505,7 @@ ul.filterList a {
   padding-left: 5px;
 }
 
-#completed_filter > a img {
+#completed_filter>a img {
   display: none;
 }
 
@@ -513,7 +520,7 @@ ul.filterList a {
   padding-left: 5px;
 }
 
-#resumed_filter > a img {
+#resumed_filter>a img {
   display: none;
 }
 
@@ -528,7 +535,7 @@ ul.filterList a {
   padding-left: 5px;
 }
 
-#paused_filter > a img {
+#paused_filter>a img {
   display: none;
 }
 
@@ -543,7 +550,7 @@ ul.filterList a {
   padding-left: 5px;
 }
 
-#errored_filter > a img {
+#errored_filter>a img {
   display: none;
 }
 
@@ -558,7 +565,7 @@ ul.filterList a {
   padding-left: 5px;
 }
 
-#active_filter > a img {
+#active_filter>a img {
   display: none;
 }
 
@@ -573,7 +580,7 @@ ul.filterList a {
   padding-left: 5px;
 }
 
-#inactive_filter > a img {
+#inactive_filter>a img {
   display: none;
 }
 
@@ -588,7 +595,7 @@ ul.filterList a {
   padding-left: 5px;
 }
 
-#stalled_filter > a img {
+#stalled_filter>a img {
   display: none;
 }
 
@@ -603,7 +610,7 @@ ul.filterList a {
   padding-left: 5px;
 }
 
-#stalled_uploading_filter > a img {
+#stalled_uploading_filter>a img {
   display: none;
 }
 
@@ -618,7 +625,7 @@ ul.filterList a {
   padding-left: 5px;
 }
 
-#stalled_downloading_filter > a img {
+#stalled_downloading_filter>a img {
   display: none;
 }
 
@@ -755,7 +762,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 /* TOOLBAR ICONS
 ----------------------------------------------------------------------------------------------*/
 
-#downloadButton > img.mochaToolButton {
+#downloadButton>img.mochaToolButton {
   display: none;
 }
 
@@ -784,7 +791,7 @@ img[src="icons/mail-folder-inbox.svg"] {
   color: white;
 }
 
-#uploadButton > img.mochaToolButton {
+#uploadButton>img.mochaToolButton {
   display: none;
 }
 
@@ -812,7 +819,7 @@ img[src="icons/mail-folder-inbox.svg"] {
   color: white;
 }
 
-#deleteButton > img.mochaToolButton {
+#deleteButton>img.mochaToolButton {
   display: none;
 }
 
@@ -840,7 +847,7 @@ img[src="icons/mail-folder-inbox.svg"] {
   color: white;
 }
 
-#resumeButton > img.mochaToolButton {
+#resumeButton>img.mochaToolButton {
   display: none;
 }
 
@@ -868,7 +875,7 @@ img[src="icons/mail-folder-inbox.svg"] {
   color: white;
 }
 
-#pauseButton > img.mochaToolButton {
+#pauseButton>img.mochaToolButton {
   display: none;
 }
 
@@ -896,7 +903,7 @@ img[src="icons/mail-folder-inbox.svg"] {
   color: white;
 }
 
-#topPrioButton > img.mochaToolButton {
+#topPrioButton>img.mochaToolButton {
   display: none;
 }
 
@@ -924,7 +931,7 @@ img[src="icons/mail-folder-inbox.svg"] {
   color: white;
 }
 
-#increasePrioButton > img.mochaToolButton {
+#increasePrioButton>img.mochaToolButton {
   display: none;
 }
 
@@ -952,7 +959,7 @@ img[src="icons/mail-folder-inbox.svg"] {
   color: white;
 }
 
-#decreasePrioButton > img.mochaToolButton {
+#decreasePrioButton>img.mochaToolButton {
   display: none;
 }
 
@@ -980,7 +987,7 @@ img[src="icons/mail-folder-inbox.svg"] {
   color: white;
 }
 
-#bottomPrioButton > img.mochaToolButton {
+#bottomPrioButton>img.mochaToolButton {
   display: none;
 }
 
@@ -1008,7 +1015,7 @@ img[src="icons/mail-folder-inbox.svg"] {
   color: white;
 }
 
-#preferencesButton > img.mochaToolButton {
+#preferencesButton>img.mochaToolButton {
   display: none;
 }
 
@@ -1146,7 +1153,7 @@ h4,
     border-top: 1px solid rgba(255, 255, 255, .25) !important;
 } */
 
-#main input[type="text"i] {
+#main input[type="text" i] {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.25);
   border-width: 0px;
@@ -1158,11 +1165,11 @@ h4,
   padding: 7px 12px;
 }
 
-#main input[type="text"i]:focus {
+#main input[type="text" i]:focus {
   background-color: rgba(0, 0, 0, 0.45);
 }
 
-#main input[type="password"i] {
+#main input[type="password" i] {
   color: #fff;
   background-color: rgba(0, 0, 0, 0.25);
   border-width: 0px;
@@ -1174,7 +1181,7 @@ h4,
   padding: 7px 12px;
 }
 
-#main input[type="password"i] {
+#main input[type="password" i] {
   background-color: rgba(0, 0, 0, 0.45);
 }
 
@@ -1306,7 +1313,7 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.25) !important;
 }
 
-input[type="button"i]:hover {
+input[type="button" i]:hover {
   background-color: var(--button-color-hover);
   padding: 6px 15px;
   cursor: pointer;
@@ -1314,7 +1321,7 @@ input[type="button"i]:hover {
   color: var(--button-text);
 }
 
-input[type="button"i] {
+input[type="button" i] {
   padding: 6px 15px !important;
   background-color: var(--button-color);
   cursor: pointer;
@@ -1336,7 +1343,7 @@ button:hover {
   color: var(--button-text);
 }
 
-input[type="submit"i] {
+input[type="submit" i] {
   padding: 6px 15px !important;
   width: 100%;
   margin-top: 15px;
@@ -1347,7 +1354,7 @@ input[type="submit"i] {
   text-transform: uppercase;
 }
 
-input[type="submit"i]:hover {
+input[type="submit" i]:hover {
   padding: 6px 15px !important;
   background-color: var(--button-color-hover) !important;
   width: 100%;

@@ -1,11 +1,11 @@
 @import url(https://use.fontawesome.com/releases/v5.0.7/css/all.css);
 
 :root {
-  --color-Dark: #25282e;
-  --color-LessDark: #2a2f36;
-  --color-Grey: #34373f;
-  --color-GreySelected: #454952;
-  --color-LightGrey: #51555f;
+  --color-Dark: hsl(0 0% 8.5%);
+  --color-LessDark: hsl(0 0% 11.0%);
+  --color-Grey: hsl(0 0% 13.6%);
+  --color-GreySelected: hsl(0 0% 17.9%);
+  --color-LightGrey: hsl(0 0% 24.3%);
   --color-White: #dfdfdf;
   --color-ProgressBarFG: #ffffff;
   --color-ProgressBarBG: #2e78d8;
@@ -25,7 +25,7 @@
   --color-Orange: #c77920;
   --color-Blue: #2e78d8;
 
-  --button-color: #34373f;
+  --button-color: hsl(0 0% 17.9%);
   --button-color-hover: #2e78d8;
   --button-text: #eee;
   --accent-color: #2e78d8;
@@ -34,39 +34,15 @@
   --text-hover: #fff;
   --link-color: #2e78d8;
 }
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-Dark: #25282e;
-    --color-LessDark: #2a2f36;
-    --color-Grey: #34373f;
-    --color-GreySelected: #454952;
-    --color-LightGrey: #51555f;
-    --color-White: #dfdfdf;
-    --color-ProgressBarFG: #ffffff;
-    --color-ProgressBarBG: #2e78d8;
-    --color-DarkSelected: #2e78d8;
 
-    --color-RatioBad: #eb2a2a;
-    --color-RatioAlmost: #e78310;
-    --color-RatioGood: #36bd58;
-    --color-RatioBest: #2e78d8;
-
-    --color-BadRed: #bd3636;
-    --color-GoodGreen: #36bd58;
-    --color-Orange: #c77920;
-    --color-Blue: #2e78d8;
-
-    --button-color: #34373f;
-    --button-color-hover: #2e78d8;
-    --button-text: #eee;
-    --accent-color: #2e78d8;
-    --accent-color-hover: #2e78d8;
-    --text: #eee;
-    --text-hover: #fff;
-    --link-color: #2e78d8;
-  }
+#transferList .dynamicTable td,
+.dynamicTableHeader th {
+  border-bottom: 1px solid #222;
 }
 
+#transferList.panel.expanded {
+  overflow-y: hidden !important;
+}
 
 /* THEME */
 html,
@@ -409,9 +385,6 @@ input::placeholder {
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
-#transferList.panel.expanded {
-  overflow-y: hidden !important;
-}
 
 /* CREDITS
 ----------------------------------------------------------------------------------------------*/
@@ -448,7 +421,6 @@ div#aboutpage_content.mochaContent h3:nth-child(2)::after {
 .RatioHerloom {
   color: var(--color-RatioHerloom);
 }
-
 
 /* REMOVE UGLY DIVIDER GIF
 ----------------------------------------------------------------------------------------------*/

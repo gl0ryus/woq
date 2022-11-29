@@ -18,8 +18,8 @@
 3. Ensure you use a trailing slash.
 
 ### Clone this repo (Linux)
-1. `sudo git clone https://github.com/gl0ryus/woq.git /opt/woq`
-3. `sudo chown -R nobody:nogroup /opt/woq/`
+1. `sudo git clone https://github.com/gl0ryus/woq.git /opt/woq && sudo chown -R nobody:nogroup /opt/woq/`
+
 
 ### Activate Alterative WebUI in qBittorrent
 1. Under `Tools->Preferences->WebUI` enable `Use alternative WebUI`.
@@ -38,11 +38,10 @@ You can also change these settings via the config file. The relevant entries are
 4. `sudo chown -R nobody:nogroup /opt/woq`
 
 ### Tested
-Based on the standard qBittorrent WebUI theme (4.3.8 release).
-Tested in Updated to 4.3.8
+Based on the standard qBittorrent WebUI theme (4.3.9 release).
+Tested in Updated to 4.3.9
 
-#### A note for those who used the [Theme Park][theme.park] nginx mod
-Modify your nginx config and remove the lines that introduced the external css, anything after `rewrite ^/qbittorrent/(.*) /$1 break; ` (non inclusive) is something that can be removed. Do not leave -modded, or any other files that are not necessary for nginx to function in the `/etc/nginx/apps/` directory. Reload nginx after making changes by doing `sudo service nginx configtest`, if it returns OK, then proceed and do `sudo service nginx reload`. 
+
 
 # Credits
 * Repslet
@@ -52,4 +51,3 @@ Modify your nginx config and remove the lines that introduced the external css, 
 
 [preview]: preview.png
 [qbittorrentsource]: https://github.com/qbittorrent/qBittorrent/tree/master/src/webui/www1\
-[theme.park]: https://github.com/gilbN/theme.park/wiki/qBittorrent

@@ -614,7 +614,7 @@ ul.filterList a {
   font-weight: 900;
   display: inline-block !important;
   margin-right: 5px;
-  color: var(--color-LightGrey);
+  color: grey;
   padding-left: 5px;
 }
 

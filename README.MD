@@ -16,7 +16,7 @@
 3. Ensure you use a trailing slash.
 
 ### Clone this repo (Linux)
-1. `sudo git clone https://github.com/brettpetch/nightwalker.git /opt/nightwalker`
+1. `sudo git clone https://github.com/gl0ryus/nightwalker.git /opt/nightwalker`
 3. `sudo chown -R nobody:nogroup /opt/nightwalker/`
 
 ### Activate Alterative WebUI in qBittorrent

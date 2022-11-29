@@ -1,7 +1,5 @@
-
-
 # A Dark but not black qBittorrent WebUI 
-**_A darker theme for qBittorrent WebUI_ (made with the help of the Walkerservers community)**
+**_A darker theme for qBittorrent WebUI_ **
 
 ![preview][preview]
 

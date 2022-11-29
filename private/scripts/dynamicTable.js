@@ -1114,7 +1114,6 @@ window.qBittorrent.DynamicTable = (function() {
                 const string = (ratio === -1) ? '∞' : window.qBittorrent.Misc.toFixedPointString(ratio, 2);
                 switch (true) {
                     case (ratio < 0.4):
-                        
                         // td.setStyle('color', '#eb3434');
                         td.set('class', 'RatioPoor');
                         break;
@@ -1146,10 +1145,9 @@ window.qBittorrent.DynamicTable = (function() {
                         td.set('class', 'RatioEpic');
                         break;
                     case (ratio > 100.0):
-                        // td.setStyle('color', '#eb3434');
+                        console.log("Setting ratio color to Herloom");
                         td.set('class', 'RatioHerloom');
                         break;
-                    
                     default:
                         // console.log('none');
                         break;

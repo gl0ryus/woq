@@ -1,3 +1,5 @@
+
+
 # A Dark but not black qBittorrent WebUI 
 **_A darker theme for qBittorrent WebUI_ (made with the help of the Walkerservers community)**
 
@@ -43,9 +45,9 @@ Tested in Updated to 4.3.8
 Modify your nginx config and remove the lines that introduced the external css, anything after `rewrite ^/qbittorrent/(.*) /$1 break; ` (non inclusive) is something that can be removed. Do not leave -modded, or any other files that are not necessary for nginx to function in the `/etc/nginx/apps/` directory. Reload nginx after making changes by doing `sudo service nginx configtest`, if it returns OK, then proceed and do `sudo service nginx reload`. 
 
 # Credits
-* The Walkerservers (Discord) community
-* glibN for the inspiration to use the Fontawesome pack
-* Fontawesome for their great fonts
+* Repslet
+* B
+* bp
 * qBittorrent for the base files
 
 [preview]: preview.png

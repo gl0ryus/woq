@@ -1113,26 +1113,44 @@ window.qBittorrent.DynamicTable = (function() {
                 const ratio = this.getRowValue(row);
                 const string = (ratio === -1) ? '∞' : window.qBittorrent.Misc.toFixedPointString(ratio, 2);
                 switch (true) {
-                    case (ratio < 0.5):
+                    case (ratio < 0.4):
                         
                         // td.setStyle('color', '#eb3434');
-                        td.set('class', 'ratioBad');
+                        td.set('class', 'RatioPoor');
                         break;
                     case (ratio < 1.0):
                         // console.log('ALMOST');
                         // td.setStyle('color', '#eb9b34');
-                        td.set('class', 'ratioAlmost');
+                        td.set('class', 'RatioCommon');
                         break;
-                    case (ratio < 5.0):
+                    case (ratio < 2.0):
                         // console.log('GOOD');
                         // td.setStyle('color', '#40b82e');
-                        td.set('class', 'ratioGood');
+                        td.set('class', 'RatioUncommon');
                         break;
-                    case (ratio > 5.0):
+                    case (ratio < 4.0):
                         // console.log('BEST');
                         // td.setStyle('color', '#40b82e');
-                        td.set('class', 'ratioBest');
+                        td.set('class', 'RatioRare');
                         break;
+                    case (ratio < 5.0):
+                        // td.setStyle('color', '#eb3434');
+                        td.set('class', 'RatioEpic');
+                        break;
+                    
+                    case (ratio < 6.0):
+                        // td.setStyle('color', '#eb3434');
+                        td.set('class', 'RatioLegendary');
+                        break;
+                    case (ratio > 6.0):
+                        // td.setStyle('color', '#eb3434');
+                        td.set('class', 'RatioEpic');
+                        break;
+                    case (ratio >= 10.0):
+                        // td.setStyle('color', '#eb3434');
+                        td.set('class', 'RatioHerloom');
+                        break;
+                    
                     default:
                         // console.log('none');
                         break;

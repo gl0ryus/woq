@@ -11,10 +11,14 @@
     --color-ProgressBarBG: #2e78d8;
     --color-DarkSelected: #2e78d8;
 
-    --color-RatioBad: #eb2a2a;
-    --color-RatioAlmost: #e78310;
-    --color-RatioGood: #36bd58;
-    --color-RatioBest: #2e78d8;
+    --color-RatioPoor: #9d9d9d;
+    --color-RatioCommon: #ffffff;
+    --color-RatioUncommon: #1eff00;
+    --color-RatioRare: #0070dd;
+    --color-RatioEpic: #a335ee;
+    --color-RatioLegendary: #ff8000;
+    --color-RatioArtifact: #e6cc80;
+    --color-RatioHerloom: #00ccff;
 
     --color-BadRed: #bd3636;
     --color-GoodGreen: #36bd58;

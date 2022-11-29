@@ -8,7 +8,7 @@
   --color-LightGrey: hsl(0 0% 24.3%);
   --color-White: #dfdfdf;
   --color-ProgressBarFG: #ffffff;
-  --color-ProgressBarBG: #2e78d8;
+  --color-ProgressBarBG: hsl(200 84.1% 18.9%);
   --color-DarkSelected: #2e78d8;
 
   --color-RatioPoor: #9d9d9d;

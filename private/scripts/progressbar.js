@@ -120,8 +120,10 @@ window.qBittorrent.ProgressBar = (function() {
         this.vals.value = value;
         this.vals.dark.empty();
         this.vals.light.empty();
-        this.vals.dark.appendText(value.round(1).toFixed(1) + '%');
-        this.vals.light.appendText(value.round(1).toFixed(1) + '%');
+        if (this.vals.value > 0 && this.vals.value < 100) {
+          this.vals.dark.appendText(value.round(1).toFixed(1) + '%');
+          this.vals.light.appendText(value.round(1).toFixed(1) + '%');
+        }
         const r = parseInt(this.vals.width * (value / 100));
         this.vals.dark.setStyle('clip', 'rect(0,' + r + 'px,' + this.vals.height + 'px,0)');
         this.vals.light.setStyle('clip', 'rect(0,' + this.vals.width + 'px,' + this.vals.height + 'px,' + r + 'px)');

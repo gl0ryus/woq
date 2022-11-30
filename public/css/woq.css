@@ -1,17 +1,45 @@
 @import url(https://use.fontawesome.com/releases/v6.2.1/css/all.css);
 
 :root {
-  --color-Dark: hsl(0 0% 8.5%);
-  --color-LessDark: hsl(0 0% 11.0%);
-  --color-Grey: hsl(0 0% 13.6%);
-  --color-GreySelected: hsl(0 0% 17.9%);
-  --color-LightGrey: hsl(0 0% 24.3%);
-  --color-White: #dfdfdf;
-  --color-ProgressBarFG: #ffffff;
-  --color-ProgressBarBG: hsl(200 80.3% 16.5%);
-  --color-DarkSelected: #2e78d8;
+  --colors-gray1: hsl(0 0% 8.5%);
+  --colors-gray2: hsl(0 0% 11.0%);
+  --colors-gray3: hsl(0 0% 13.6%);
+  --colors-gray4: hsl(0 0% 15.8%);
+  --colors-gray5: hsl(0 0% 17.9%);
+  --colors-gray6: hsl(0 0% 20.5%);
+  --colors-gray7: hsl(0 0% 24.3%);
+  --colors-gray8: hsl(0 0% 31.2%);
+  --colors-gray9: hsl(0 0% 43.9%);
+  --colors-gray10: hsl(0 0% 49.4%);
+  --colors-gray11: hsl(0 0% 62.8%);
+  --colors-gray12: hsl(0 0% 93.0%);
+  --colors-slate1: hsl(200 7.0% 8.8%);
+  --colors-slate2: hsl(195 7.1% 11.0%);
+  --colors-slate3: hsl(197 6.8% 13.6%);
+  --colors-slate4: hsl(198 6.6% 15.8%);
+  --colors-slate5: hsl(199 6.4% 17.9%);
+  --colors-slate6: hsl(201 6.2% 20.5%);
+  --colors-slate7: hsl(203 6.0% 24.3%);
+  --colors-slate8: hsl(207 5.6% 31.6%);
+  --colors-slate9: hsl(206 6.0% 43.9%);
+  --colors-slate10: hsl(206 5.2% 49.5%);
+  --colors-slate11: hsl(206 6.0% 63.0%);
+  --colors-slate12: hsl(210 6.0% 93.0%);
+  --colors-sky1: hsl(205 45.0% 8.6%);
+  --colors-sky2: hsl(202 71.4% 9.6%);
+  --colors-sky3: hsl(201 74.6% 12.2%);
+  --colors-sky4: hsl(201 77.4% 14.4%);
+  --colors-sky5: hsl(200 80.3% 16.5%);
+  --colors-sky6: hsl(200 84.1% 18.9%);
+  --colors-sky7: hsl(199 90.2% 22.1%);
+  --colors-sky8: hsl(198 100% 26.1%);
+  --colors-sky9: hsl(193 98.0% 70.0%);
+  --colors-sky10: hsl(192 100% 77.0%);
+  --colors-sky11: hsl(192 85.0% 55.8%);
+  --colors-sky12: hsl(198 98.0% 95.8%);
+  --colors-hiContrast: var(--colors-slate12);
 
-  --color-RatioPoor: #9d9d9d;
+  --color-RatioPoor: #8f8f8f;
   --color-RatioCommon: #ffffff;
   --color-RatioUncommon: #1eff00;
   --color-RatioRare: #0070dd;
@@ -33,6 +61,10 @@
   --text: #eee;
   --text-hover: #fff;
   --link-color: #2e78d8;
+
+  --shadow-01: 0 1px 2px rgba(251,251,254,.2);
+  --shadow-02: 0 1px 6px rgba(251,251,254,.2);
+  --shadow-03: 0 1px 8px rgba(251,251,254,.2);
 }
 
 #transferList .dynamicTable td,
@@ -48,82 +80,93 @@
 html,
 body,
 #desktopHeader,
-#desktopNavbar,
 #mochaToolbar,
 #Filters {
-  background: var(--color-Dark) !important;
-  color: var(--color-White);
+  background: var(--colors-gray1) !important;
+  color: var(--colors-hiContrast);
+}
+
+body {
+  font-family: Noto Sans, DejaVu Sans Mono, IBM Plex Sans, sans-serif, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";
 }
 
 a {
-  color: var(--color-White) !important;
+  color: var(--colors-hiContrast) !important;
 }
 
 #desktopNavbar li a {
-  color: var(--color-White) !important;
-  border-bottom-color: var(--color-Grey) !important;
+  color: var(--colors-gray11) !important;
+  border-bottom-color: var(--colors-gray3) !important;
+}
+
+#desktopNavbar ul li a {
+  color: var(--colors-hiContrast) !important;
 }
 
 #desktopNavbar li a:hover {
-  background: var(--color-Grey) !important;
+  background: var(--colors-gray1) !important;
+  border-radius: 4px;
 }
 
 #desktopNavbar li ul {
-  background: var(--color-Dark) !important;
+  background: var(--colors-gray5) !important;
   background-image: none !important;
+  border: 1px solid var(--colors-gray9);
+  border-radius: 4px;
+  box-shadow: var(--shadow-01);
 }
 
 #desktopNavbar li ul .divider {
-  border-top-color: var(--color-Dark) !important;
+  border-top-color: var(--colors-gray8) !important;
   /* display: none; */
 }
 
 #pageWrapper {
-  border-top-color: var(--color-Grey) !important;
+  border-top-color: var(--colors-gray3) !important;
 }
 
 .torrentTable,
 .dynamicTable {
-  border-color: var(--color-Grey) !important;
+  border-color: var(--colors-gray3) !important;
 }
 
 .torrentTable th,
 .dynamicTable th {
-  background: var(--color-Dark) !important;
-  color: var(--color-White) !important;
+  background: var(--colors-gray1) !important;
+  color: var(--colors-hiContrast) !important;
 }
 
 .dynamicTable th {
-  border-right-color: var(--color-Grey) !important;
+  border-right-color: var(--colors-gray3) !important;
 }
 
 .torrentTable tr,
 .dynamicTable tr {
-  background: var(--color-Dark) !important;
+  background: var(--colors-gray1) !important;
 }
 
 .torrentTable tr:nth-child(even),
 .dynamicTable tr:nth-child(even) {
-  background: var(--color-LessDark) !important;
+  background: var(--colors-gray2) !important;
 }
 
 .torrentTable tr.selected,
 .torrentTable tr:hover,
 .dynamicTable tr.selected,
 .dynamicTable tr:hover {
-  color: var(--color-White) !important;
+  color: var(--colors-hiContrast) !important;
 }
 
 .torrentTable tr.selected,
 .dynamicTable tr.selected {
-  background: var(--color-GreySelected) !important;
+  background: var(--colors-gray5) !important;
 }
 
 .torrentTable tr:hover,
 .dynamicTable tr:hover,
 ul.filterList li:hover,
 .selectedFilter {
-  background: var(--color-GreySelected) !important;
+  background: var(--colors-gray5) !important;
 }
 
 .toolbarTabs {
@@ -133,21 +176,23 @@ ul.filterList li:hover,
 .toolbarTabs li,
 .toolbarTabs li a {
   background-image: none !important;
-  color: var(--color-White) !important;
+  color: var(--colors-hiContrast) !important;
 }
 
 .toolbarTabs li {
   margin-left: 2px !important;
   margin-right: 2px !important;
   margin-bottom: 0 !important;
-  background: var(--color-Grey) !important;
+  background: var(--colors-gray3) !important;
   border-radius: 2px 2px 0 0;
+  border: 1px solid transparent;
   box-shadow: none;
   background-position: left -70px;
 }
 
 .toolbarTabs li.selected {
-  background: var(--color-DarkSelected) !important;
+  background: var(--colors-sky5) !important;
+  border: 1px solid var(--colors-sky7);
 }
 
 .toolbarTabs li a {
@@ -167,13 +212,22 @@ ul.filterList li:hover,
 #watched_folders_tab tr,
 #watched_folders_tab th,
 #watched_folders_tab td {
-  border-color: var(--color-White) !important;
+  border-color: var(--colors-gray5) !important;
+}
+
+#desktopFooterWrapper {
+  height: auto !important;
 }
 
 #desktopFooter {
-  background: var(--color-Dark) !important;
-  border: 1px solid var(--color-Grey) !important;
-  color: var(--color-White) !important;
+  padding: 2px 8px 0 8px !important;
+  background: var(--colors-gray1) !important;
+  border: 1px solid var(--colors-gray3) !important;
+  color: var(--colors-hiContrast) !important;
+}
+
+#desktopFooter > table {
+  border: none;
 }
 
 .icon16 {
@@ -182,30 +236,30 @@ ul.filterList li:hover,
 }
 
 .panel {
-  background: var(--color-Dark) !important;
-  border-bottom-color: var(--color-Grey) !important;
-  color: var(--color-White) !important;
+  background: var(--colors-gray1) !important;
+  border-bottom-color: var(--colors-gray3) !important;
+  color: var(--colors-hiContrast) !important;
 }
 
 .panel-header,
 .panel-headerContent,
 .toolbarTabs {
   background-image: none !important;
-  background-color: var(--color-Grey) !important;
+  background-color: var(--colors-gray3) !important;
 }
 
 .panel-header {
-  border-bottom-color: var(--color-Dark) !important;
+  border-bottom-color: var(--colors-gray1) !important;
 }
 
 .horizontalHandle,
 .columnHandle {
-  background: var(--color-Grey) !important;
-  border-color: var(--color-Grey) !important;
+  border-color: var(--colors-gray3) !important;
 }
 
 .horizontalHandle .handleIcon {
-  background: none !important;
+  border-top: 1px solid var(--colors-gray5);
+  background-color: var(--colors-gray1);
 }
 
 .columnHandle:after {
@@ -222,37 +276,36 @@ ul.filterList li:hover,
 
 .mochaTitlebar,
 .mochaTitlebar.replaced {
-  background: var(--color-Grey) !important;
+  background: var(--colors-gray3) !important;
   border-radius: 7px 7px 0 0;
 }
 
 .mochaTitle {
-  color: var(--color-White) !important;
+  color: var(--colors-hiContrast) !important;
 }
 
 .mochaToolbarWrapper {
-  border-top-color: var(--color-Grey) !important;
+  border-top-color: var(--colors-gray3) !important;
 }
 
 .mochaToolbar {
-  border-top-color: var(--color-Grey) !important;
-  background: var(--color-Grey) !important;
+  border-top-color: var(--colors-gray3) !important;
+  background: var(--colors-gray3) !important;
   padding-top: 4px;
 }
 
 .mochaContentBorder {
-  border-top-color: var(--color-Dark) !important;
-  border-bottom-color: var(--color-Grey) !important;
-  border-bottom-width: 23px !important;
+  border-top-color: var(--colors-gray1) !important;
+  border-bottom-color: var(--colors-gray3) !important;
   border-radius: 0 0 7px 7px;
 }
 
 .mochaContentWrapper {
-  background: var(--color-Dark) !important;
+  background: var(--colors-gray2) !important;
 }
 
 .mochaContent fieldset {
-  border-color: var(--color-White) !important;
+  border-color: var(--colors-hiContrast) !important;
 }
 
 .mocha::after {
@@ -264,7 +317,7 @@ ul.filterList li:hover,
   bottom: 7px;
   right: 5px;
   border-radius: 7px;
-  box-shadow: 0 0 10px #000;
+  box-shadow: var(--shadow-03);
   z-index: -1000;
 }
 
@@ -274,25 +327,27 @@ ul.filterList li:hover,
 
 .contextMenu,
 .contextMenu li ul {
-  background: var(--color-Grey) !important;
+  border-radius: 4px;
+  background: var(--colors-gray5) !important;
   border-color: #5e5e5e !important;
 }
 
 .contextMenu li a {
-  color: var(--color-White) !important;
+  color: var(--colors-hiContrast) !important;
+  border-radius: 4px;
 }
 
 .contextMenu li a:hover {
-  background: var(--color-DarkSelected) !important;
+  background: var(--colors-gray1) !important;
 }
 
 h2,
 h3 {
-  color: var(--color-White);
+  color: var(--colors-hiContrast);
 }
 
 .filterList a {
-  color: var(--color-White) !important;
+  color: var(--colors-hiContrast) !important;
 }
 
 /*Makes the toolbar buttons, rightclick menu and menu bar white*/
@@ -319,19 +374,19 @@ h3 {
 
 /*progressbar border*/
 div.progressbar_wrapper {
-  border-color: var(--color-GreySelected) !important;
+  border-color: var(--colors-gray5) !important;
 }
 
 /* % of download completed*/
 .progressbar_dark {
-  background: var(--color-ProgressBarBG) !important;
-  color: var(--color-ProgressBarFG) !important;
+  background: var(--colors-sky7) !important;
+  color: var(--colors-hiContrast) !important;
 }
 
 /* % of download uncompleted*/
 .progressbar_light {
-  background: var(--color-Dark) !important;
-  color: var(--color-White) !important;
+  background: var(--colors-gray1) !important;
+  color: var(--colors-hiContrast) !important;
 }
 
 /* .panel-collapse {
@@ -339,26 +394,30 @@ div.progressbar_wrapper {
 } */
 
 select {
-  background: var(--color-Grey);
-  border-color: var(--color-Blue);
-  color: var(--color-White) !important;
+  background: var(--colors-gray4);
+  border: 1px solid var(--colors-gray5);
+  color: var(--colors-hiContrast) !important;
+}
+
+table {
+  border: 1px solid var(--colors-gray5);
 }
 
 input,
 textarea {
-  background: var(--color-Grey) !important;
-  color: var(--color-White) !important;
-  border: 0px;
+  background-color: var(--colors-gray4) !important;
+  color: var(--colors-hiContrast) !important;
+  border: 1px solid var(--colors-gray5);
   white-space: nowrap;
 }
 
 input::placeholder {
-  color: var(--color-White) !important;
+  color: var(--colors-gray11) !important;
 }
 
 .select-watched-folder-editable {
   position: relative;
-  background-color: var(--color-Grey);
+  background-color: var(--colors-gray3);
   border: 0px;
   width: 160px;
   height: 20px;
@@ -371,17 +430,17 @@ input::placeholder {
 /* SCROLLBARS
 ----------------------------------------------------------------------------------------------*/
 ::-webkit-scrollbar-corner {
-  background-color: var(--color-Grey);
+  background-color: var(--colors-gray3);
 }
 
 ::-webkit-scrollbar {
-  background-color: var(--color-Grey);
+  background-color: var(--colors-gray3);
   height: 10px;
   width: 10px;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: var(--color-GreySelected);
+  background: var(--colors-gray8);
   -webkit-border-radius: 2px;
   border-radius: 2px;
 }
@@ -443,10 +502,9 @@ td.statusBarSeparator {
 ----------------------------------------------------------------------------------------------*/
 #desktopNavbar li ul li a {
   position: relative;
-  /* padding: 1px 9px 1px 25px; */
-  min-width: 120px;
+  min-width: 140px;
   font-weight: normal;
-  padding: 5px 10px 1px 1px;
+  padding: 4px 0 4px 4px;
 }
 
 .MyMenuIcon {
@@ -465,13 +523,13 @@ ul.filterList a {
 }
 
 #all_filter:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
   content: "\f0b0";
   font-weight: 900;
   display: inline-block;
   margin-right: 5px;
-  color: var(--color-White);
+  color: var(--colors-hiContrast);
   padding-left: 5px;
 }
 
@@ -480,7 +538,7 @@ ul.filterList a {
 }
 
 #downloading_filter:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
   content: "\f063";
   font-weight: 900;
@@ -495,7 +553,7 @@ ul.filterList a {
 }
 
 #seeding_filter:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
   content: "\f062";
   font-weight: 900;
@@ -510,7 +568,7 @@ ul.filterList a {
 }
 
 #completed_filter:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
   content: "\f00c";
   font-weight: 900;
@@ -525,7 +583,7 @@ ul.filterList a {
 }
 
 #resumed_filter:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
   content: "\f04b";
   font-weight: 900;
@@ -540,7 +598,7 @@ ul.filterList a {
 }
 
 #paused_filter:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
   content: "\f04c";
   font-weight: 900;
@@ -555,13 +613,13 @@ ul.filterList a {
 }
 
 #errored_filter:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 16px;
   content: "\f00d";
   font-weight: 900;
   display: inline-block;
   margin-right: 5px;
-  color: var(--color-BadRed);
+  color: rgb(219, 30, 37);
   padding-left: 5px;
 }
 
@@ -570,7 +628,7 @@ ul.filterList a {
 }
 
 #active_filter:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
   content: "\f0b0";
   font-weight: 900;
@@ -585,13 +643,13 @@ ul.filterList a {
 }
 
 #inactive_filter:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
   content: "\f0b0";
   font-weight: 900;
   display: inline-block;
+  color: hsl(28deg 69% 77%);
   margin-right: 5px;
-  color: var(--color-LightGrey);
   padding-left: 5px;
 }
 
@@ -600,13 +658,13 @@ ul.filterList a {
 }
 
 #stalled_filter:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
   content: "\f0b0";
   font-weight: 900;
   display: inline-block;
+  color: hsl(10 78.0% 54.0%);
   margin-right: 5px;
-  color: var(--color-LightGrey);
   padding-left: 5px;
 }
 
@@ -615,13 +673,12 @@ ul.filterList a {
 }
 
 #stalled_uploading_filter:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
   content: "\f093";
   font-weight: 900;
   display: inline-block !important;
   margin-right: 5px;
-  color: grey;
   padding-left: 5px;
 }
 
@@ -630,13 +687,12 @@ ul.filterList a {
 }
 
 #stalled_downloading_filter:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 14px;
   content: "\f019";
   font-weight: 900;
   display: inline-block !important;
   margin-right: 5px;
-  color: var(--color-LightGrey);
   padding-left: 5px;
 }
 
@@ -767,7 +823,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #downloadButton:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f0c1";
   font-weight: 900;
@@ -780,7 +836,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #downloadButton:hover:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f0c1";
   font-weight: 900;
@@ -796,7 +852,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #uploadButton:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f067";
   font-weight: 900;
@@ -808,7 +864,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #uploadButton:hover:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f067";
   font-weight: 900;
@@ -824,7 +880,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #deleteButton:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f068";
   font-weight: 900;
@@ -836,7 +892,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #deleteButton:hover:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f068";
   font-weight: 900;
@@ -852,7 +908,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #resumeButton:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f04b";
   font-weight: 900;
@@ -864,7 +920,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #resumeButton:hover:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f04b";
   font-weight: 900;
@@ -880,7 +936,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #pauseButton:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f04c";
   font-weight: 900;
@@ -892,7 +948,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #pauseButton:hover:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f04c";
   font-weight: 900;
@@ -908,7 +964,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #topPrioButton:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f102";
   font-weight: 900;
@@ -920,7 +976,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #topPrioButton:hover:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f102";
   font-weight: 900;
@@ -936,7 +992,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #increasePrioButton:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f106";
   font-weight: 900;
@@ -948,7 +1004,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #increasePrioButton:hover:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f106";
   font-weight: 900;
@@ -964,7 +1020,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #decreasePrioButton:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f107";
   font-weight: 900;
@@ -976,7 +1032,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #decreasePrioButton:hover:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f107";
   font-weight: 900;
@@ -992,7 +1048,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #bottomPrioButton:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f103";
   font-weight: 900;
@@ -1004,7 +1060,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #bottomPrioButton:hover:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f103";
   font-weight: 900;
@@ -1020,7 +1076,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #preferencesButton:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f013";
   font-weight: 900;
@@ -1032,7 +1088,7 @@ img[src="icons/mail-folder-inbox.svg"] {
 }
 
 #preferencesButton:hover:before {
-  font-family: "Font Awesome 5 Free";
+  font-family: "Font Awesome 6 Free";
   font-size: 24px;
   content: "\f013";
   font-weight: 900;
@@ -1045,10 +1101,6 @@ img[src="icons/mail-folder-inbox.svg"] {
 
 /* BASICS
 ----------------------------------------------------------------------------------------------*/
-
-select {
-  border: none !important;
-}
 
 a,
 h2,
@@ -1249,7 +1301,7 @@ fieldset {
 }
 
 .mochaOverlay {
-  /* background: var(--color-Grey) !important; */
+  /* background: var(--colors-gray3) !important; */
   height: 0px;
   position: absolute;
   top: 0;
@@ -1290,7 +1342,7 @@ fieldset.settings {
   border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius: 8px;
-  padding: 4px 4px 4px 10px;
+  padding: 4px 4px 10px 10px;
 }
 
 textarea:disabled {
@@ -1428,7 +1480,7 @@ input[type="submit" i]:hover {
 }
 
 #rssTorrentDetailsDate {
-  background-color: var(--color-Grey);
+  background-color: var(--colors-gray3);
 }
 
 #rssDetailsView {

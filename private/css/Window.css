@@ -93,7 +93,7 @@ div.mochaToolbarWrapper.bottom {
 }
 
 .mochaContent {
-    padding: 10px 12px;
+    padding: 6px 8px !important;
 }
 
 .mocha .handle {

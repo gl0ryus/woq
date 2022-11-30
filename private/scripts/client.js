@@ -146,7 +146,7 @@ window.addEvent('load', function() {
         if ($defined(filt_w))
             filt_w = filt_w.toInt();
         else
-            filt_w = 120;
+            filt_w = 140;
         new MochaUI.Column({
             id: 'filtersColumn',
             placement: 'left',

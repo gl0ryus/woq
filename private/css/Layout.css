@@ -101,14 +101,12 @@ body {
 /* Navbar */
 
 #desktopNavbar {
-    background: #f2f2f2;
-    /*height: 30px;*/
-    margin: 0 0px;
-    overflow: hidden;  /* Remove this line if you want the menu to be backward compatible with Firefox 2 */
-    /* Fixes by Chris */
-    /*background-color: #ccc;*/
-    height: 20px;
-    border-bottom: 1px solid #3f3f3f;
+  height: 22px;
+  margin: 0 0px;
+  overflow: hidden;  /* Remove this line if you want the menu to be backward compatible with Firefox 2 */
+  /* Fixes by Chris */
+  /*background-color: #ccc;*/
+  border-bottom: 1px solid #3f3f3f;
 }
 
 #desktopNavbar ul {

@@ -1109,6 +1109,7 @@ window.qBittorrent.DynamicTable = (function() {
             };
 
             // ratio
+            /*
             this.columns['ratio'].updateTd = function(td, row) {
                 const ratio = this.getRowValue(row);
                 const string = (ratio === -1) ? '∞' : window.qBittorrent.Misc.toFixedPointString(ratio, 2);
@@ -1154,7 +1155,41 @@ window.qBittorrent.DynamicTable = (function() {
                 }
                 td.set('text', string);
                 td.set('title', string);
-            };
+            };*/
+            this.columns['ratio'].updateTd = function(td, row) {
+                const ratio = this.getRowValue(row);
+                const string = (ratio === -1) ? '∞' : window.qBittorrent.Misc.toFixedPointString(ratio, 2);
+
+                let color = undefined;
+                if (ratio < 1.0) {
+                  color = "RatioPoor";
+                } else if (ratio < 2.0) {
+                  color = "RatioCommon";
+                } else if (ratio < 10.0) {
+                  color = "RatioUncommon";
+                } else if (ratio < 20.0) {
+                  color = "RatioRare";
+                } else if (ratio < 60.0) {
+                  color = "RatioEpic";
+                } else if (ratio < 90.0) {
+                  color = "RatioLegendary";
+                } else if (ratio < 100.0) {
+                  color = "RatioArtifact";
+                } else {
+                  color = "RatioHerloom";
+                }
+
+                if (color !== undefined) {
+                  if (td.hasClass("invisible")) {
+                    td.set("class", "invisible " + color);
+                  } else {
+                    td.set("class", color);
+                  }
+                }
+
+                td.set('text', string);
+                td.set('title', string);
+            };     
 
             // added on
             this.columns['added_on'].updateTd = function(td, row) {

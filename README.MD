@@ -11,7 +11,7 @@
 - ![#a335ee](https://placehold.co/15x15/a335ee/a335ee.png) `< 60`
 - ![#ff8000](https://placehold.co/15x15/ff8000/ff8000.png) `< 90`
 - ![#e6cc80](https://placehold.co/15x15/e6cc80/e6cc80.png) `< 100`
-- ![#00ccff](https://placehold.co/15x15/00ccff/00ccff.png) `> 100`
+- ? `> 100`
 
 
 

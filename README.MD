@@ -37,22 +37,15 @@ You can also change these settings via the config file. The relevant entries are
 - `WebUI\RootFolder=/opt/woq/`
 
 ### Update theme (Linux)
-1. `git -C /opt/woq checkout main`
-2. `git -C /opt/woq fetch origin main`
-3. `git -C /opt/woq reset --hard origin/main`
-4. `sudo chown -R nobody:nogroup /opt/woq`
+1. `cd /opt/woq`
+2. `sudo git pull`
 
 ### Tested
-Based on the standard qBittorrent WebUI theme (4.3.9 release).
-Tested in Updated to 4.3.9
-
-
+Tested in 4.3.9
 
 # Credits
-* Repslet
-* B
-* bp
-* qBittorrent for the base files
+- bp
+- imabee
+- qbittorrent
 
 [p]: p.png
-[qbittorrentsource]: https://github.com/qbittorrent/qBittorrent/tree/master/src/webui/www1\

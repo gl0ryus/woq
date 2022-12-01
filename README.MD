@@ -1,12 +1,19 @@
-# A Dark but not black qBittorrent WebUI 
-**_A darker theme for qBittorrent WebUI_**
+# World of Quinoa 
+**_A world of warcraft inspired theme_**
 
-![preview][preview]
+![p][p]
 
 # Features
-- It's dark, but not black
-- It has different colors for ratio-values (see screenshot)
-- It has a mix of Fontawesome and custom icons
+- ![#8f8f8f](https://placehold.co/15x15/8f8f8f/8f8f8f.png) `< 1`
+- ![#ffffff](https://placehold.co/15x15/ffffff/ffffff.png) `< 2`
+- ![#1eff00](https://placehold.co/15x15/1eff00/1eff00.png) `< 10`
+- ![#0070dd](https://placehold.co/15x15/0070dd/0070dd.png) `< 20`
+- ![#a335ee](https://placehold.co/15x15/a335ee/a335ee.png) `< 60`
+- ![#ff8000](https://placehold.co/15x15/ff8000/ff8000.png) `< 90`
+- ![#e6cc80](https://placehold.co/15x15/e6cc80/e6cc80.png) `< 100`
+- ![#00ccff](https://placehold.co/15x15/00ccff/00ccff.png) `> 100`
+
+
 
 # Installation
 
@@ -47,5 +54,5 @@ Tested in Updated to 4.3.9
 * bp
 * qBittorrent for the base files
 
-[preview]: preview.png
+[p]: p.png
 [qbittorrentsource]: https://github.com/qbittorrent/qBittorrent/tree/master/src/webui/www1\

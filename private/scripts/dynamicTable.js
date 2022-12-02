@@ -1142,7 +1142,7 @@ window.qBittorrent.DynamicTable = (function() {
 
                 td.set('text', string);
                 td.set('title', string);
-            };     
+            };
 
             // added on
             this.columns['added_on'].updateTd = function(td, row) {

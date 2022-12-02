@@ -504,8 +504,7 @@ window.addEvent('load', function() {
             trackerFilterList.removeChild(trackerFilterList.firstChild);
 
         const createLink = function(hash, text, count) {
-            const html = '<a href="#">'
-                + '<img src="icons/network-server.svg"/>'
+            const html = '<a href="#"><img src="icons/network-server.svg"/>'
                 + window.qBittorrent.Misc.escapeHtml(text.replace("%1", count)) + '</a>';
             const el = new Element('li', {
                 id: hash,

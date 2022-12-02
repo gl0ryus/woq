@@ -46,7 +46,6 @@
   --color-RatioEpic: #a335ee;
   --color-RatioLegendary: #ff8000;
   --color-RatioArtifact: #e6cc80;
-  --color-RatioHerloom: #00ccff;
 
   --color-BadRed: #bd3636;
   --color-GoodGreen: #36bd58;
@@ -245,7 +244,7 @@ ul.filterList li:hover,
 .panel-headerContent,
 .toolbarTabs {
   background-image: none !important;
-  background-color: var(--colors-gray3) !important;
+  background-color: var(--colors-gray1) !important;
 }
 
 .panel-header {
@@ -259,7 +258,7 @@ ul.filterList li:hover,
 
 .horizontalHandle .handleIcon {
   border-top: 1px solid var(--colors-gray5);
-  background-color: var(--colors-gray1);
+  background-color: var(--colors-gray3);
 }
 
 .columnHandle:after {
@@ -338,7 +337,7 @@ ul.filterList li:hover,
 }
 
 .contextMenu li a:hover {
-  background: var(--colors-gray1) !important;
+  background-color: var(--colors-gray1) !important;
 }
 
 h2,
@@ -401,6 +400,11 @@ select {
 
 table {
   border: 1px solid var(--colors-gray5);
+}
+
+div#torrentsTableDiv > table,
+div#torrentsTableFixedHeaderDiv > table {
+  border: none;
 }
 
 input,
@@ -484,8 +488,21 @@ div#aboutpage_content.mochaContent h3:nth-child(2)::after {
   color: var(--color-RatioArtifact);
 }
 
-.RatioHerloom {
-  color: var(--color-RatioHerloom);
+@-webkit-keyframes newglow {
+  from {
+    text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 13px #e60073, 0 0 18px #e60073;
+  }
+  to {
+    text-shadow: 0 0 8px #fff, 0 0 13px #ff4da6, 0 0 18px #ff4da6, 0 0 23px #ff4da6;
+  }
+}
+
+.RatioHeirloom {
+  display: inline;
+  color: yellow;
+  -webkit-animation: newglow 1s ease-in-out infinite alternate;
+  -moz-animation: newglow 1s ease-in-out infinite alternate;
+  animation: newglow 1s ease-in-out infinite alternate;
 }
 
 /* REMOVE UGLY DIVIDER GIF

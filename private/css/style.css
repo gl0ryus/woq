@@ -193,7 +193,7 @@ a.propButton img {
 }
 
 .contextMenu .separator {
-    border-top: 1px solid #999;
+    border-top: 1px solid var(--colors-gray7);
 }
 
 .contextMenu li {
@@ -452,7 +452,7 @@ ul.filterList li:last-child {
 
 .filterTitle {
   display: block;
-  background: var(--colors-gray3);
+  background: var(--colors-gray1);
   color: #a1a1a1;
   border-top-left-radius: 4px;
   border-top-right-radius: 4px;

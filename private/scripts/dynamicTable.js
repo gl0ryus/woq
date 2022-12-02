@@ -1129,7 +1129,7 @@ window.qBittorrent.DynamicTable = (function() {
                 } else if (ratio < 100.0) {
                   color = "RatioArtifact";
                 } else {
-                  color = "RatioHerloom";
+                  color = "RatioHeirloom";
                 }
 
                 if (color !== undefined) {

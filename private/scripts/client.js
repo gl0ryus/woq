@@ -393,12 +393,12 @@ window.addEvent('load', function() {
         categoryList.empty();
 
         const create_link = function(hash, text, count) {
-            const html = '<a href="#" onclick="setCategoryFilter(' + hash + ');return false;">'
-                + '<img src="icons/inode-directory.svg"/>'
+            const html = '<a href="#"><img src="icons/inode-directory.svg"/>'
                 + window.qBittorrent.Misc.escapeHtml(text) + ' (' + count + ')' + '</a>';
             const el = new Element('li', {
                 id: hash,
-                html: html
+                html: html,
+                onclick: "setCategoryFilter(" + hash + "); return false;"
             });
             window.qBittorrent.Filters.categoriesFilterContextMenu.addTarget(el);
             return el;
@@ -450,12 +450,12 @@ window.addEvent('load', function() {
             tagFilterList.removeChild(tagFilterList.firstChild);
 
         const createLink = function(hash, text, count) {
-            const html = '<a href="#" onclick="setTagFilter(' + hash + ');return false;">'
-                + '<img src="icons/inode-directory.svg"/>'
+            const html = '<a href="#"><img src="icons/inode-directory.svg"/>'
                 + window.qBittorrent.Misc.escapeHtml(text) + ' (' + count + ')' + '</a>';
             const el = new Element('li', {
                 id: hash,
-                html: html
+                html: html,
+                onclick: "setTagFilter(" + hash + "); return false;"
             });
             window.qBittorrent.Filters.tagsFilterContextMenu.addTarget(el);
             return el;
@@ -504,12 +504,13 @@ window.addEvent('load', function() {
             trackerFilterList.removeChild(trackerFilterList.firstChild);
 
         const createLink = function(hash, text, count) {
-            const html = '<a href="#" onclick="setTrackerFilter(' + hash + ');return false;">'
+            const html = '<a href="#">'
                 + '<img src="icons/network-server.svg"/>'
                 + window.qBittorrent.Misc.escapeHtml(text.replace("%1", count)) + '</a>';
             const el = new Element('li', {
                 id: hash,
-                html: html
+                html: html,
+                onclick: "setTrackerFilter(" + hash + "); return false;"
             });
             window.qBittorrent.Filters.trackersFilterContextMenu.addTarget(el);
             return el;

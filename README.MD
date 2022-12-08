@@ -48,4 +48,8 @@ Tested in 4.3.9
 - imabee
 - qbittorrent
 
+# What seedbox do I use?
+- I use HBD, heres my affiliate link.
+- https://my.hostingby.design/aff.php?aff=1150
+
 [p]: p.png

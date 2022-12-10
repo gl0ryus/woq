@@ -1,6 +1,10 @@
 # World of Quinoa 
 **_A world of warcraft inspired theme_**
 
+### Tested on
+- DOES NOT WORK IN 4.5
+- Tested in 4.3.9, 4.4.5
+
 ![p][p]
 
 # Features
@@ -39,9 +43,6 @@ You can also change these settings via the config file. The relevant entries are
 ### Update theme (Linux)
 1. `cd /opt/woq`
 2. `sudo git pull`
-
-### Tested
-Tested in 4.3.9
 
 # Credits
 - bp

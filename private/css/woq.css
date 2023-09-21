@@ -168,6 +168,13 @@
   --shadow-03: 0 1px 8px rgba(251,251,254,.2);
 }
 
+#prop_webseeds,
+#torrentTrackersTableFixedHeaderDiv,
+#torrentPeersTableFixedHeaderDiv,
+#torrentFilesTableFixedHeaderDiv {
+  border-bottom: 1px solid var(--primary-2);
+}
+
 #torrentsTableFixedHeaderDiv {
   border-bottom: 1px solid var(--primary-5);
 }
@@ -351,7 +358,7 @@ ul.filterList li:not(.selectedFilter):hover {
 #watched_folders_tab tr,
 #watched_folders_tab th,
 #watched_folders_tab td {
-  border-color: var(--primary-5) !important;
+  border-color: var(--primary-3) !important;
 }
 
 #desktopFooterWrapper {
@@ -362,7 +369,6 @@ ul.filterList li:not(.selectedFilter):hover {
   padding: 2px 8px 0 8px !important;
   background: var(--primary-4) !important;
   color: var(--primary-12) !important;
-  border: 1px solid var(--primary-6);
 }
 
 #desktopFooter > table {
@@ -1443,7 +1449,7 @@ h4,
 
 /* Sidemenu */
 .selectedFilter {
-  background-color: var(--primary-6);
+  background-color: var(--gold-7);
   color: #fff;
 }
 
@@ -1458,11 +1464,6 @@ h4,
 
 .columnHandle:after {
   transform: rotate(90deg) !important;
-}
-
-fieldset {
-  border-width: 1px !important;
-  border-style: solid !important;
 }
 
 /*Modal */

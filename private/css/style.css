@@ -151,15 +151,6 @@ hr {
     height: 16px;
 }
 
-.selectedFilter {
-    background-color: #415A8D;
-    color: #FFFFFF;
-}
-
-.selectedFilter a {
-    color: #FFFFFF;
-}
-
 #properties {
     background-color: #e5e5e5;
 }
@@ -193,7 +184,7 @@ a.propButton img {
 }
 
 .contextMenu .separator {
-    border-top: 1px solid var(--colors-gray7);
+    border-top: 1px solid var(--primary-7);
 }
 
 .contextMenu li {
@@ -363,11 +354,12 @@ a.propButton img {
 
 #torrentsFilterInput {
     width: 160px;
-    padding-left: 2em;
+    padding: 4px 2px 4px 2.25em;
     background-image: url("../icons/edit-find.svg");
     background-repeat: no-repeat;
     background-size: 1.5em;
-    background-position: left;
+    background-position: 6px;
+    border-radius: 36px;
 }
 
 #torrentFilesFilterToolbar {
@@ -405,14 +397,6 @@ label.partial {
     background-position: 0 -26px;
 }
 
-fieldset.settings {
-    border: solid 1px black;
-    border-radius: 8px;
-    -webkit-border-radius: 8px;
-    -moz-border-radius: 8px;
-    padding: 4px 4px 4px 10px;
-}
-
 fieldset.settings legend {
     margin-left: 8px;
     padding: 4px;
@@ -433,16 +417,12 @@ div.formRow {
 }
 
 .filterWrapper {
-  border-radius: 4px;
-  border: 1px solid var(--colors-gray4);
-  margin: 4px 6px;
-  background: var(--colors-gray2);
+  background: var(--primary-1);
 }
 
 ul.filterList li {
   cursor: pointer;
   padding: 2px 0 2px 2px;
-  border-bottom: 1px solid var(--colors-gray3);
 }
 
 ul.filterList li:last-child {
@@ -451,25 +431,24 @@ ul.filterList li:last-child {
 }
 
 .filterTitle {
-  display: block;
-  background: var(--colors-gray1);
-  color: #a1a1a1;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom: 1px solid var(--colors-gray4);
-  font-weight: bold;
-  text-transform: uppercase;
+  display: flex;
+  align-items: center;
   padding: 2px 0 2px 2px;
+  font-size: 13px;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  color: var(--primary-10);
+  background: var(--primary-0);
+  border-bottom: 1px solid var(--primary-5);
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
 }
 
 .filterTitle img {
     width: 16px;
     height: 16px;
-    margin-bottom: -3px;
-    padding: 0 5px;
+    margin-right: 2px;
+    filter: brightness(600%) !important;
 }
 
 .filterTitle img.rotate {
@@ -489,9 +468,6 @@ ul.filterList a {
     color: inherit;
 }
 
-ul.filterList li:hover {
-    background-color: #e60;
-}
 
 ul.filterList li:hover a {
     color: white;
@@ -581,14 +557,6 @@ td.generalLabel {
     outline: none;
 }
 
-/*
- * Workaround to prevent the transfer list from
- * disappearing when zooming in the browser.
- */
-#filtersColumn_handle {
-    margin-left: -1px;
-}
-
 #error_div {
     float: left;
     font-size: 14px;
@@ -626,15 +594,11 @@ td.statusBarSeparator {
 
 #searchResultsTableContainer {
     height: calc(100% - 140px);
-    -moz-height: calc(100% - 140px);
-    -webkit-height: calc(100% - 140px);
     overflow: auto;
 }
 
 #searchResultsTableDiv {
     height: calc(100% - 26px) !important;
-    -moz-height: calc(100% - 26px) !important;
-    -webkit-height: calc(100% - 26px) !important;
 }
 
 #searchResults .dynamicTable {
@@ -645,28 +609,3 @@ td.statusBarSeparator {
     font-style: italic;
 }
 
-.red {
-    color: red;
-}
-
-.green {
-    color: green;
-}
-
-.searchPluginsTableRow {
-    cursor: pointer;
-}
-
-#torrentFilesTableDiv .dynamicTable tr.nonAlt {
-    background-color: #fff;
-}
-
-#torrentFilesTableDiv .dynamicTable tr.nonAlt.selected {
-    background-color: #354158;
-    color: #fff;
-}
-
-#torrentFilesTableDiv .dynamicTable tr.nonAlt:hover {
-    background-color: #ee6600;
-    color: #fff;
-}

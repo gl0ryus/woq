@@ -94,6 +94,9 @@
   --gold-11: #cbb99f;
   --gold-12: #e8e2d9;
 
+  --gold-hl-primary: #b39770;
+  --gold-hl-secondary: #746247;
+
   --blue-1: #0d1520;
   --blue-2: #111927;
   --blue-3: #0d2847;
@@ -136,6 +139,12 @@
   --primary-11: var(--sand-12);
   --primary-12: white;
 
+  /**
+   * If you change --primary-9 then regenerate this using
+   * https://angel-rs.github.io/css-color-filter-generator/
+   */
+  --primary-9-filter: brightness(0) saturate(100%) invert(41%) sepia(7%) saturate(411%) hue-rotate(9deg) brightness(98%) contrast(80%);
+
   --transition-props: color,background-color,border-color,text-decoration-color,fill,stroke,-webkit-text-decoration-color;
   --transition-duration: 100ms;
   --transition-timing-function: cubic-bezier(.4,0,.2,1);
@@ -155,7 +164,7 @@
   --color-Blue: #2e78d8;
 
   --button-color: hsl(0 0% 17.9%);
-  --button-color-hover: #2e78d8;
+  --button-color-hover: var(--gold-9);
   --button-text: #eee;
   --accent-color: #2e78d8;
   --accent-color-hover: #2e78d8;
@@ -166,6 +175,11 @@
   --shadow-01: 0 1px 2px rgba(251,251,254,.2);
   --shadow-02: 0 1px 6px rgba(251,251,254,.2);
   --shadow-03: 0 1px 8px rgba(251,251,254,.2);
+}
+
+#mainWindowTabs {
+  position: relative;
+  top: 8px;
 }
 
 #prop_webseeds,
@@ -208,7 +222,11 @@ a {
   transition-property: var(--transition-props);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
-  color: var(--primary-12) !important;
+  color: var(--primary-12);
+}
+
+#desktop {
+  height: 100vh;
 }
 
 #desktopNavbar {
@@ -244,10 +262,24 @@ a {
 
 #desktopNavbar li ul .divider {
   border-top-color: var(--primary-8) !important;
-  /* display: none; */
+}
+
+#desktopFooterWrapper {
+  height: auto !important;
+}
+
+#desktopFooter {
+  padding: 2px 8px 0 8px !important;
+  background: var(--primary-4) !important;
+  color: var(--primary-12) !important;
+}
+
+#desktopFooter > table {
+  border: none;
 }
 
 #pageWrapper {
+  height: 100%;
   border-top: 1px solid var(--primary-3) !important;
   border-bottom: 1px solid var(--primary-6) !important;
 }
@@ -292,7 +324,7 @@ a {
 
 .torrentTable tr.selected,
 .dynamicTable tr.selected {
-  background: var(--gold-8) !important;
+  background: var(--gold-hl-secondary) !important;
 }
 
 .dynamicTable tr.selected > td:nth-child(3) {
@@ -304,19 +336,28 @@ a {
   background: var(--gold-6) !important;
 }
 
+span.filterTitle:hover {
+  background: var(--primary-1);
+  color: var(--primary-12);
+}
+
 ul.filterList li {
   transition-property: var(--transition-props);
   transition-duration: var(--transition-duration);
   transition-timing-function: var(--transition-timing-function);
 }
 
+ul.filterList li > a {
+  color: var(--primary-10);
+}
+
 ul.filterList li:not(.selectedFilter):hover {
-  background: var(--primary-3) !important;
+  background: var(--primary-4) !important;
+  color: var(--primary-12) !important;
 }
 
 .toolbarTabs {
   padding-bottom: 0 !important;
-  border: 1px solid var()
 }
 
 .toolbarTabs li,
@@ -330,15 +371,22 @@ ul.filterList li:not(.selectedFilter):hover {
   margin-right: 2px !important;
   margin-bottom: 0 !important;
   background: var(--primary-3) !important;
-  border-radius: 2px 2px 0 0;
-  border: 1px solid transparent;
+  border-radius: 4px 4px 0 0;
+  border: 1px solid var(--primary-5);
   box-shadow: none;
   background-position: left -70px;
+  transition-property: var(--transition-props);
+  transition-duration: var(--transition-duration);
+  transition-timing-function: var(--transition-timing-function);
+}
+
+.toolbarTabs li:not(.selected):hover {
+  background: var(--primary-5) !important;
 }
 
 .toolbarTabs li.selected {
-  background: var(--colors-sky5) !important;
-  border: 1px solid var(--colors-sky7);
+  background: var(--gold-hl-secondary) !important;
+  border: 1px solid var(--gold-hl-primary);
 }
 
 .toolbarTabs li a {
@@ -347,7 +395,7 @@ ul.filterList li:not(.selectedFilter):hover {
 }
 
 #propertiesPanel_header {
-  height: 27px !important;
+  margin: 0 0 -3px 0;
 }
 
 #propertiesPanel_headerContent {
@@ -358,21 +406,7 @@ ul.filterList li:not(.selectedFilter):hover {
 #watched_folders_tab tr,
 #watched_folders_tab th,
 #watched_folders_tab td {
-  border-color: var(--primary-3) !important;
-}
-
-#desktopFooterWrapper {
-  height: auto !important;
-}
-
-#desktopFooter {
-  padding: 2px 8px 0 8px !important;
-  background: var(--primary-4) !important;
-  color: var(--primary-12) !important;
-}
-
-#desktopFooter > table {
-  border: none;
+  border: 1px solid var(--primary-2) !important;
 }
 
 .icon16 {
@@ -381,16 +415,18 @@ ul.filterList li:not(.selectedFilter):hover {
 }
 
 .panel {
-  background: var(--primary-1) !important;
+  background: var(--primary-1-2) !important;
   border-bottom-color: var(--primary-3) !important;
-  color: var(--primary-12) !important;
+  color: var(--primary-11) !important;
 }
 
 .panel-header,
-.panel-headerContent,
+.panel-headerContent {
+  background: var(--primary-1) !important;
+}
+
 .toolbarTabs {
-  background-image: none !important;
-  background-color: var(--primary-3) !important;
+  background: none !important;
 }
 
 .panel-header {
@@ -483,10 +519,6 @@ h3 {
   color: var(--primary-12);
 }
 
-.filterList a {
-  color: var(--primary-12) !important;
-}
-
 /*Makes the toolbar buttons, rightclick menu and menu bar white*/
 .mochaToolButton,
 .contextMenu img,
@@ -517,7 +549,7 @@ div.progressbar_wrapper {
 
 /* % of download completed*/
 .progressbar_dark {
-  background: var(--colors-sky7) !important;
+  background: var(--gold-hl-primary) !important;
   color: var(--primary-12) !important;
 }
 
@@ -549,8 +581,9 @@ textarea {
   transition-timing-function: var(--transition-timing-function);
   color: var(--primary-12);
   background-color: var(--primary-3);
-  border: 1px solid var(--primary-6);
+  border: 1px solid var(--primary-5);
   padding: 4px;
+  outline: none;
 }
 
 input:hover,
@@ -566,12 +599,12 @@ textarea:focus {
 
 input::placeholder,
 textarea::placeholder {
-  color: var(--primary-10) !important;
+  color: var(--primary-9) !important;
 }
 
 input:hover::placeholder,
 textarea:hover::placeholder {
-  color: var(--primary-11) !important;
+  color: var(--primary-10) !important;
 }
 
 input:disabled,
@@ -695,10 +728,10 @@ td.statusBarSeparator {
 
 /* ICONS IN LEFT SIDEBAR/FILTERLIST
 ----------------------------------------------------------------------------------------------*/
-
-ul#statusFilterList a {
-  display: inline;
-  text-transform: lowercase;
+#statusFilterList li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 #all_filter>a img {
@@ -711,9 +744,9 @@ ul#statusFilterList a {
   content: "\f0b0";
   font-weight: 900;
   display: inline-block;
-  margin-right: 5px;
+  padding: 0 6px;
   color: var(--primary-12);
-  padding-left: 5px;
+  width: 12px;
 }
 
 #downloading_filter>a img {
@@ -726,9 +759,9 @@ ul#statusFilterList a {
   content: "\f063";
   font-weight: 900;
   display: inline-block;
-  margin-right: 5px;
+  padding: 0 6px;
   color: var(--color-GoodGreen);
-  padding-left: 5px;
+  width: 12px;
 }
 
 #seeding_filter>a img {
@@ -741,9 +774,9 @@ ul#statusFilterList a {
   content: "\f062";
   font-weight: 900;
   display: inline-block;
-  margin-right: 5px;
+  padding: 0 6px;
   color: var(--color-Blue);
-  padding-left: 5px;
+  width: 12px;
 }
 
 #completed_filter>a img {
@@ -756,9 +789,9 @@ ul#statusFilterList a {
   content: "\f00c";
   font-weight: 900;
   display: inline-block;
-  margin-right: 5px;
+  padding: 0 6px;
   color: var(--color-Blue);
-  padding-left: 5px;
+  width: 12px;
 }
 
 #resumed_filter>a img {
@@ -771,9 +804,9 @@ ul#statusFilterList a {
   content: "\f04b";
   font-weight: 900;
   display: inline-block;
-  margin-right: 5px;
+  padding: 0 6px;
   color: var(--color-GoodGreen);
-  padding-left: 5px;
+  width: 12px;
 }
 
 #paused_filter>a img {
@@ -786,9 +819,9 @@ ul#statusFilterList a {
   content: "\f04c";
   font-weight: 900;
   display: inline-block;
-  margin-right: 5px;
+  padding: 0 6px;
   color: var(--color-Orange);
-  padding-left: 5px;
+  width: 12px;
 }
 
 #errored_filter>a img {
@@ -801,9 +834,9 @@ ul#statusFilterList a {
   content: "\f00d";
   font-weight: 900;
   display: inline-block;
-  margin-right: 5px;
+  padding: 0 6px;
   color: rgb(219, 30, 37);
-  padding-left: 5px;
+  width: 12px;
 }
 
 #active_filter>a img {
@@ -816,9 +849,9 @@ ul#statusFilterList a {
   content: "\f0b0";
   font-weight: 900;
   display: inline-block;
-  margin-right: 5px;
+  padding: 0 6px;
   color: var(--color-GoodGreen);
-  padding-left: 5px;
+  width: 12px;
 }
 
 #inactive_filter>a img {
@@ -832,8 +865,8 @@ ul#statusFilterList a {
   font-weight: 900;
   display: inline-block;
   color: hsl(28deg 69% 77%);
-  margin-right: 5px;
-  padding-left: 5px;
+  padding: 0 6px;
+  width: 12px;
 }
 
 #stalled_filter>a img {
@@ -847,8 +880,8 @@ ul#statusFilterList a {
   font-weight: 900;
   display: inline-block;
   color: hsl(10 78.0% 54.0%);
-  margin-right: 5px;
-  padding-left: 5px;
+  padding: 0 6px;
+  width: 12px;
 }
 
 #stalled_uploading_filter>a img {
@@ -861,8 +894,8 @@ ul#statusFilterList a {
   content: "\f093";
   font-weight: 900;
   display: inline-block !important;
-  margin-right: 5px;
-  padding-left: 5px;
+  padding: 0 6px;
+  width: 12px;
 }
 
 #stalled_downloading_filter>a img {
@@ -875,8 +908,8 @@ ul#statusFilterList a {
   content: "\f019";
   font-weight: 900;
   display: inline-block !important;
-  margin-right: 5px;
-  padding-left: 5px;
+  padding: 0 6px;
+  width: 12px;
 }
 
 /* REPLACE STANDARD ICONS WITH CUSTOM PNG VERSION
@@ -929,6 +962,7 @@ img[src="icons/stalledUP.svg"] {
   background-size: contain;
   background-repeat: no-repeat;
   background-origin: content-box;
+  filter: var(--primary-9-filter) !important;
   object-position: -999999px 999999px;
 }
 
@@ -1297,71 +1331,53 @@ h4,
 #main h1 {
   display: block;
   font-size: 2em;
-  margin-block-start: 2em;
-  margin-block-end: -0.9em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
+  margin: 32px 0;
   font-weight: bold;
 }
 
 #error_msg {
-  text-transform: uppercase;
-  color: #d8000c;
-  background-color: #ffd2d2;
-  font-family: Helvetica, Arial, sans-serif;
-  left: 50%;
-  top: 20%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  margin-left: auto;
-  margin-right: auto;
+  margin: 8px;
+  font-size: 20px;
+  color: var(--red-10);
+  background-color: var(--red-4);
+  border-radius: 16px;
   text-align: center;
-  position: absolute;
-  border-radius: 4px;
+  text-transform: uppercase;
+}
+
+div#error_msg:not(:empty) {
+  border: 1px solid var(--red-6);
+  padding: 8px 16px;
 }
 
 #main {
-  margin-left: auto;
-  margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 32px auto;
+  padding: 0;
   text-align: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  padding-top: 0;
-  /* background: rgba(0, 0, 0, 0.25); */
   width: 400px;
-  height: 460px;
-  -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.6);
+  min-height: 260px;
+  background-color: var(--primary-1-2);
+  box-shadow: var(--shadow-02);
 }
 
 #logo img {
-  height: 11em;
-  position: absolute;
-  left: 50%;
-  /* top: 50%; */
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -160%);
+  display: none;
 }
 
 #formplace {
+  display: flex;
+  margin: 0 auto;
   text-transform: uppercase;
   text-align: left;
   font-size: 12px;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   font-weight: 300 !important;
   padding: 10px;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
+}
+
+#formplace label {
+  font-weight: 500;
 }
 
 #mochaToolbar .divider {
@@ -1390,67 +1406,34 @@ h4,
     border-top: 1px solid rgba(255, 255, 255, .25) !important;
 } */
 
-#main input[type="text" i] {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.25);
-  border-width: 0px;
-  outline: none;
-  border: none;
-  border-radius: 4px;
-  width: 250px;
-  height: 24px;
-  padding: 7px 12px;
-}
-
-#main input[type="text" i]:focus {
-  background-color: rgba(0, 0, 0, 0.45);
-}
-
-#main input[type="password" i] {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.25);
-  border-width: 0px;
-  outline: none;
-  border: none;
-  border-radius: 4px;
-  width: 250px;
-  height: 24px;
-  padding: 7px 12px;
-}
-
-#main input[type="password" i] {
-  background-color: rgba(0, 0, 0, 0.45);
-}
 
 #loginform #login {
-  padding: 6px 15px !important;
   width: 100%;
-  margin-top: 35px;
-  background-color: var(--button-color) !important;
-  border: none;
+  margin-top: 16px;
+  border: 1px solid var(--gold-7);
+  background-color: var(--gold-6) !important;
   border-radius: 4px;
+  cursor: pointer;
   color: var(--button-text) !important;
   outline: none;
   text-transform: uppercase;
   font-size: 18px;
-  font-weight: 300;
-  height: 44px;
-  line-height: 1.3333333;
 }
 
 #loginform #login:hover {
-  background-color: var(--button-color-hover) !important;
-  padding: 6px 15px;
-  border-radius: 4px;
-  cursor: pointer;
-  border: none;
   color: var(--button-text) !important;
+  border: 1px solid var(--gold-9);
+  background-color: var(--gold-8) !important;
 }
 
 /* Sidemenu */
-.selectedFilter {
-  background-color: var(--gold-7);
-  color: #fff;
+li.selectedFilter {
+  background-color: var(--gold-hl-secondary);
+  font-weight: 600;
+}
+
+li.selectedFilter > a {
+  color: var(--primary-12) !important;
 }
 
 .columnHandle {

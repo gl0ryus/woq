@@ -65,7 +65,6 @@ body {
 
 #desktopTitlebar h2.tagline {
     padding: 7px 0 0 0;
-    font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 10px;
     color: #d4dce4;
     font-weight: bold;
@@ -79,7 +78,6 @@ body {
 }
 
 #topNav {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 10px;
     position: absolute;
     right: 0;
@@ -191,7 +189,6 @@ body {
 #desktopNavbar li ul li a:hover {
     background: #6C98D9;
     color: #fff;
-    -moz-border-radius: 2px;
 }
 
 #desktopNavbar li ul li a:hover .check {
@@ -220,8 +217,6 @@ li.divider {
 #pageWrapper {
     position: relative;
     overflow: hidden;  /* This can be set to hidden or auto */
-    border-top: 1px solid #909090;
-    border-bottom: 1px solid #909090;
     /*height: 100%;*/
 }
 
@@ -237,7 +232,6 @@ li.divider {
 }
 
 #desktopFooter {
-    font-family: Verdana, Arial, Helvetica, sans-serif;
     font-size: 11px;
     height: 24px;
     padding: 6px 8px 0 8px;
@@ -372,9 +366,6 @@ li.divider {
     text-align: right;
 }
 
-.panel-header-toolbox {
-}
-
 div.toolbox.divider {  /* Have to specify div here for IE6's sake */
     background: url(../images/toolbox-divider.gif) repeat-y;
     padding-left: 8px;
@@ -405,7 +396,6 @@ div.toolbox.divider {  /* Have to specify div here for IE6's sake */
 
 .iconWrapper:hover {
     border: 1px solid #a0a0a0;
-    -moz-border-radius: 3px;
 }
 
 #spinnerWrapper {

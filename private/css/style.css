@@ -19,7 +19,6 @@ a img,
 body {
     margin: 0;
     text-align: left;
-    font-family: Arial, Helvetica, sans-serif;
     font-size: 12px;
     line-height: 18px;
     color: #555;
@@ -69,7 +68,6 @@ h4 {
 }
 
 a {
-    color: #e60;
     text-decoration: none;
     cursor: pointer;
 }
@@ -104,7 +102,6 @@ pre {
     background-color: #f6f6f6;
     color: #006600;
     display: block;
-    font-family: 'Courier New', Courier, monospace;
     font-size: 11px;
     max-height: 250px;
     overflow: auto;
@@ -197,7 +194,6 @@ a.propButton img {
     padding: 5px 20px 5px 5px;
     font-size: 12px;
     text-decoration: none;
-    font-family: tahoma, arial, sans-serif;
     color: #000;
     white-space: nowrap;
 }
@@ -344,12 +340,11 @@ a.propButton img {
 
 #mainWindowTabs {
     float: right;
-    margin: 4px 5px 0 0;
 }
 
 #torrentsFilterToolbar {
     float: right;
-    margin-right: 30px;
+    margin: 2px 16px 0 0;
 }
 
 #torrentsFilterInput {
@@ -364,7 +359,7 @@ a.propButton img {
 
 #torrentFilesFilterToolbar {
     float: right;
-    margin-right: 30px;
+    margin-right: 16px;
 }
 
 #torrentFilesFilterInput {
@@ -417,7 +412,7 @@ div.formRow {
 }
 
 .filterWrapper {
-  background: var(--primary-1);
+  background: var(--primary-1-2);
 }
 
 ul.filterList li {
@@ -442,6 +437,8 @@ ul.filterList li:last-child {
   border-bottom: 1px solid var(--primary-5);
   overflow: hidden;
   white-space: nowrap;
+  cursor: pointer;
+  font-weight: 500;
 }
 
 .filterTitle img {
@@ -465,9 +462,7 @@ ul.filterList a {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
-    color: inherit;
 }
-
 
 ul.filterList li:hover a {
     color: white;
@@ -512,7 +507,7 @@ td.generalLabel {
 }
 
 #prop_general {
-    padding: 2px;
+    padding: 2px 4px;
 }
 
 #watched_folders_tab {

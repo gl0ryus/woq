@@ -469,6 +469,7 @@ ul.filterList li:not(.selectedFilter):hover {
   width: 100%;
   position: relative;
   height: 29px;
+  margin-bottom: -3px;
   overflow: hidden;
   border-top: unset;
   border-bottom: 1px solid var(--primary-4);

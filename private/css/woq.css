@@ -1,32 +1,15 @@
 @import url(https://use.fontawesome.com/releases/v6.2.1/css/all.css);
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+/**
+ * NOTE(stacksmash76): It is possible to create a light version of this theme.
+ * All you have to do is extract light CSS color vars from @radix-ui/colors
+ * and replace them here. On top of that you will have to fix the icons
+ * and potentially balance the contrast out a bit.
+ *
+ * If you do go on this road, good luck and don't forget to share your work with others.
+ */
 :root {
-  --colors-slate1: hsl(200 7.0% 8.8%);
-  --colors-slate2: hsl(195 7.1% 11.0%);
-  --colors-slate3: hsl(197 6.8% 13.6%);
-  --colors-slate4: hsl(198 6.6% 15.8%);
-  --colors-slate5: hsl(199 6.4% 17.9%);
-  --colors-slate6: hsl(201 6.2% 20.5%);
-  --colors-slate7: hsl(203 6.0% 24.3%);
-  --colors-slate8: hsl(207 5.6% 31.6%);
-  --colors-slate9: hsl(206 6.0% 43.9%);
-  --colors-slate10: hsl(206 5.2% 49.5%);
-  --colors-slate11: hsl(206 6.0% 63.0%);
-  --colors-slate12: hsl(210 6.0% 93.0%);
-  --colors-sky1: hsl(205 45.0% 8.6%);
-  --colors-sky2: hsl(202 71.4% 9.6%);
-  --colors-sky3: hsl(201 74.6% 12.2%);
-  --colors-sky4: hsl(201 77.4% 14.4%);
-  --colors-sky5: hsl(200 80.3% 16.5%);
-  --colors-sky6: hsl(200 84.1% 18.9%);
-  --colors-sky7: hsl(199 90.2% 22.1%);
-  --colors-sky8: hsl(198 100% 26.1%);
-  --colors-sky9: hsl(193 98.0% 70.0%);
-  --colors-sky10: hsl(192 100% 77.0%);
-  --colors-sky11: hsl(192 85.0% 55.8%);
-  --colors-sky12: hsl(198 98.0% 95.8%);
-
   --sage-1: #101211;
   --sage-2: #171918;
   --sage-3: #202221;
@@ -39,33 +22,6 @@
   --sage-10: #717d78;
   --sage-11: #acb4b0;
   --sage-12: #eceeed;
-
-  --slate-1: #111113;
-  --slate-2: #18191b;
-  --slate-3: #212225;
-  --slate-4: #272a2d;
-  --slate-5: #2e3135;
-  --slate-6: #363a3f;
-  --slate-7: #43484e;
-  --slate-8: #5a6169;
-  --slate-9: #696e77;
-  --slate-10: #777b84;
-  --slate-11: #afb3ba;
-  --slate-12: #edeef0;
-
-  /** Taken from Adobe **/
-  --red-hl-1: #7b0000;
-  --red-hl-2: #8d0000;
-  --red-hl-3: #a50000;
-  --red-hl-4: #be0403;
-  --red-hl-5: #d71913;
-  --red-hl-6: #ea3829;
-  --red-hl-7: #f65843;
-  --red-hl-8: #ff755e;
-  --red-hl-9: #ff9581;
-  --red-hl-10: #ffb0a1;
-  --red-hl-11: #ffc9bd;
-  --red-hl-12: #ffded8;
 
   /** Radix red **/
   --red-1: #191111;
@@ -138,6 +94,34 @@
   --primary-10: var(--sand-11);
   --primary-11: var(--sand-12);
   --primary-12: white;
+
+  /* UNUSED */
+  --slate-1: #111113;
+  --slate-2: #18191b;
+  --slate-3: #212225;
+  --slate-4: #272a2d;
+  --slate-5: #2e3135;
+  --slate-6: #363a3f;
+  --slate-7: #43484e;
+  --slate-8: #5a6169;
+  --slate-9: #696e77;
+  --slate-10: #777b84;
+  --slate-11: #afb3ba;
+  --slate-12: #edeef0;
+
+  /** UNUSED: Taken from Adobe **/
+  --red-hl-1: #7b0000;
+  --red-hl-2: #8d0000;
+  --red-hl-3: #a50000;
+  --red-hl-4: #be0403;
+  --red-hl-5: #d71913;
+  --red-hl-6: #ea3829;
+  --red-hl-7: #f65843;
+  --red-hl-8: #ff755e;
+  --red-hl-9: #ff9581;
+  --red-hl-10: #ffb0a1;
+  --red-hl-11: #ffc9bd;
+  --red-hl-12: #ffded8;
 
   /**
    * If you change --primary-9 then regenerate this using
@@ -1420,14 +1404,14 @@ div#error_msg:not(:empty) {
   background-color: var(--gold-6) !important;
   border-radius: 4px;
   cursor: pointer;
-  color: var(--button-text) !important;
+  color: var(--primary-12) !important;
   outline: none;
   text-transform: uppercase;
   font-size: 18px;
 }
 
 #loginform #login:hover {
-  color: var(--button-text) !important;
+  color: var(--primary-12) !important;
   border: 1px solid var(--gold-9);
   background-color: var(--gold-8) !important;
 }

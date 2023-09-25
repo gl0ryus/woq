@@ -507,7 +507,7 @@ td.generalLabel {
 }
 
 #prop_general {
-    padding: 2px 4px;
+    padding: 2px 4px 8px 4px;
 }
 
 #watched_folders_tab {

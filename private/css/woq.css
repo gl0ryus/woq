@@ -399,7 +399,8 @@ ul.filterList li:not(.selectedFilter):hover {
 }
 
 #propertiesPanel_header {
-  margin: 0 0 -3px 0;
+  position: relative;
+  top: 3px;
 }
 
 #propertiesPanel_headerContent {

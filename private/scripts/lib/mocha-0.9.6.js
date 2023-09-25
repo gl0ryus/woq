@@ -2656,15 +2656,17 @@ MUI.Window = new Class({
 		var toolbar2Height = this.toolbar2WrapperEl ? this.toolbar2WrapperEl.getStyle('height').toInt() + this.toolbar2WrapperEl.getStyle('margin-top').toInt() : 0;
 
 		this.headerFooterShadow = options.headerHeight + options.footerHeight + shadowBlur2x;
+
 		var height = this.contentWrapperEl.getStyle('height').toInt() + this.headerFooterShadow + toolbarHeight + toolbar2Height + borderHeight;
 		var width = this.contentWrapperEl.getStyle('width').toInt() + shadowBlur2x;
+
 		this.windowEl.setStyles({
 			'height': height,
 			'width': width
 		});
 
 		this.overlayEl.setStyles({
-			'height': height,
+			'height': height - 12,
 			'top': shadowBlur - shadowOffset.y,
 			'left': shadowBlur - shadowOffset.x
 		});

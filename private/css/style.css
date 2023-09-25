@@ -523,7 +523,6 @@ td.generalLabel {
 .select-watched-folder-editable {
     position: relative;
     background-color: white;
-    border: solid grey 1px;
     width: 160px;
     height: 20px;
 }
@@ -533,7 +532,6 @@ td.generalLabel {
     top: 0px;
     bottom: 0px;
     left: 0px;
-    border: none;
     width: 160px;
     margin: 0;
 }
@@ -543,8 +541,7 @@ td.generalLabel {
     top: 0px;
     left: 0px;
     width: 140px;
-    padding: 1px;
-    border: none;
+    padding: 1px 0 2px 2px;
 }
 
 .select-watched-folder-editable select:focus,

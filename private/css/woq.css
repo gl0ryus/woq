@@ -479,14 +479,8 @@ ul.filterList li:not(.selectedFilter):hover {
   padding-top: 4px;
 }
 
-.mochaContentBorder {
-  border-top-color: var(--primary-1) !important;
-  border-bottom-color: var(--primary-3) !important;
-  border-radius: 0 0 7px 7px;
-}
-
 .mochaContentWrapper {
-  background: var(--primary-2) !important;
+  background: var(--primary-1) !important;
 }
 
 .mocha::after {
@@ -499,6 +493,7 @@ ul.filterList li:not(.selectedFilter):hover {
   right: 5px;
   border-radius: 7px;
   box-shadow: var(--shadow-03);
+  background-color: var(--primary-2);
   z-index: -1000;
 }
 
@@ -1478,6 +1473,8 @@ li.selectedFilter > a {
   left: 0;
   margin: 0px;
   padding: 0px;
+  border-radius: 7px;
+  border: 1px solid var(--primary-7);
 }
 
 .mochaToolbar {
@@ -1495,8 +1492,12 @@ li.selectedFilter > a {
 }
 
 .mochaContentBorder {
-  border-top: 0px solid #dadada;
-  border-bottom: 1px solid #dadada;
+  border-top: 1px solid var(--primary-4);
+  border-bottom: 1px solid var(--primary-4);
+}
+
+form#uploadForm > div {
+  border: unset !important;
 }
 
 fieldset.settings {

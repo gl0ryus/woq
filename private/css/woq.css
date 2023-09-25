@@ -556,12 +556,14 @@ div.progressbar_wrapper {
 .progressbar_dark {
   background: var(--gold-hl-primary) !important;
   color: var(--primary-12) !important;
+  text-shadow: -1px 1px 4px rgb(0, 0, 0);
 }
 
 /* % of download uncompleted*/
 .progressbar_light {
   background: var(--primary-1) !important;
   color: var(--primary-12) !important;
+  text-shadow: -1px 1px 4px rgb(0, 0, 0);
 }
 
 /* .panel-collapse {

@@ -156,7 +156,7 @@
   --color-RatioEpic: #a335ee;
   --color-RatioLegendary: #ff8000;
   --color-RatioArtifact: #e6cc80;
-  --color-RatioHerloom: #00ccff;
+  --color-RatioHeirloom: #00ccff;
 
   --color-BadRed: #bd3636;
   --color-GoodGreen: #36bd58;
@@ -663,8 +663,8 @@ input[type="button"]:hover {
 /* CREDITS
 ----------------------------------------------------------------------------------------------*/
 div#aboutpage_content.mochaContent h3:nth-child(2)::after {
-  content: "\Awith the Nightwalker-theme. By the Walkerserver community";
-  white-space: pre;
+  content: "\Awith the woq theme. Based off nightwalker.\AMade by stacksmash76 and gl0ryus.\A\A";
+  white-space: pre-wrap;
   font-weight: normal;
   color: rgb(255, 255, 255);
 }
@@ -699,8 +699,8 @@ div#aboutpage_content.mochaContent h3:nth-child(2)::after {
   color: var(--color-RatioArtifact);
 }
 
-.RatioHerloom {
-  color: var(--color-RatioHerloom);
+.RatioHeirloom {
+  color: var(--color-RatioHeirloom);
 }
 
 /* REMOVE UGLY DIVIDER GIF

@@ -156,7 +156,7 @@
   --color-RatioEpic: #a335ee;
   --color-RatioLegendary: #ff8000;
   --color-RatioArtifact: #e6cc80;
-  --color-RatioHerloom: #00ccff;
+  --color-RatioHeirloom: #00ccff;
 
   --color-BadRed: #bd3636;
   --color-GoodGreen: #36bd58;
@@ -286,7 +286,7 @@ a {
 
 .torrentTable th,
 .dynamicTable th {
-  background: var(--primary-1) !important;
+  background-color: var(--primary-1) !important;
   color: var(--primary-12) !important;
   transition-property: var(--transition-props);
   transition-duration: var(--transition-duration);
@@ -295,7 +295,7 @@ a {
 
 .torrentTable th:hover,
 .dynamicTable th:hover {
-  background: var(--primary-4) !important;
+  background-color: var(--primary-4) !important;
 }
 
 .dynamicTable th {
@@ -431,6 +431,10 @@ ul.filterList li:not(.selectedFilter):hover {
 
 .panel-header {
   border-bottom-color: var(--primary-1) !important;
+}
+
+.bottomPanel {
+  border-top: 1px solid var(--primary-3);
 }
 
 .horizontalHandle .handleIcon {
@@ -663,8 +667,8 @@ input[type="button"]:hover {
 /* CREDITS
 ----------------------------------------------------------------------------------------------*/
 div#aboutpage_content.mochaContent h3:nth-child(2)::after {
-  content: "\Awith the Nightwalker-theme. By the Walkerserver community";
-  white-space: pre;
+  content: "\Awith the woq theme. Based off nightwalker. Made by stacksmash76 and gl0ryus.\A\A";
+  white-space: pre-wrap;
   font-weight: normal;
   color: rgb(255, 255, 255);
 }
@@ -699,8 +703,21 @@ div#aboutpage_content.mochaContent h3:nth-child(2)::after {
   color: var(--color-RatioArtifact);
 }
 
-.RatioHerloom {
-  color: var(--color-RatioHerloom);
+@keyframes newglow {
+  from {
+    text-shadow: 0 0 4px #fff, 0 0 8px #fff, 0 0 13px #e60073, 0 0 18px #e60073;
+  }
+  to {
+    text-shadow: 0 0 8px #fff, 0 0 13px #ff4da6, 0 0 18px #ff4da6, 0 0 23px #ff4da6;
+  }
+}
+
+.RatioHeirloom:not(.invisible) {
+  overflow: visible;
+  color: yellow;
+  -webkit-animation: newglow 1s ease-in-out infinite alternate;
+  -moz-animation: newglow 1s ease-in-out infinite alternate;
+  animation: newglow 1s ease-in-out infinite alternate;
 }
 
 /* REMOVE UGLY DIVIDER GIF
@@ -1389,17 +1406,6 @@ div#error_msg:not(:empty) {
   margin: unset;
   padding: 4px 0;
   height: auto !important;
-}
-
-.dynamicTable th.sorted.reverse {
-  background-image: url("../icons/go-down.png") !important;
-}
-
-.dynamicTable th.sorted {
-  background-image: url("../icons/go-up.png") !important;
-  background-size: 9px !important;
-  background-position: right !important;
-  background-repeat: no-repeat !important;
 }
 
 /* li.divider {

@@ -29,7 +29,7 @@ body {
 }
 
 .invisible {
-    display: none;
+    display: none !important;
 }
 
 /* Typography */
@@ -359,7 +359,7 @@ a.propButton img {
 
 #torrentFilesFilterToolbar {
     float: right;
-    margin-right: 16px;
+    margin: -3px 16px 0 0;
 }
 
 #torrentFilesFilterInput {

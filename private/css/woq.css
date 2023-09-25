@@ -124,10 +124,11 @@
   --red-hl-12: #ffded8;
 
   /**
-   * If you change --primary-9 then regenerate this using
+   * If you change any any of the colors, then regenerate the filter definitions using
    * https://angel-rs.github.io/css-color-filter-generator/
    */
   --primary-9-filter: brightness(0) saturate(100%) invert(41%) sepia(7%) saturate(411%) hue-rotate(9deg) brightness(98%) contrast(80%);
+  --gold-hl-primary-filter: brightness(0) saturate(100%) invert(71%) sepia(42%) saturate(303%) hue-rotate(355deg) brightness(81%) contrast(86%);
 
   --transition-props: color,background-color,border-color,text-decoration-color,fill,stroke,-webkit-text-decoration-color;
   --transition-duration: 100ms;
@@ -218,25 +219,22 @@ a {
   border-bottom: 1px solid var(--primary-3);
 }
 
-#desktopNavbar > ul > li > a:hover {
-  background-color: var(--primary-3) !important;
+#desktopNavbar img[src="icons/checked.svg"] {
+  filter: var(--gold-hl-primary-filter) !important;
 }
 
-#desktopNavbar li a {
-  color: var(--primary-11) !important;
+#desktopNavbar > ul > li > a {
+  color: var(--primary-9) !important;
   border-bottom-color: var(--primary-3) !important;
   border-radius: 4px;
 }
 
-#desktopNavbar ul li a {
-  color: var(--primary-12) !important;
+#desktopNavbar > ul > li > a:hover {
+  color: var(--primary-11) !important;
+  background-color: var(--primary-3) !important;
 }
 
-#desktopNavbar li a:hover {
-  background: var(--primary-1) !important;
-}
-
-#desktopNavbar li ul {
+#desktopNavbar > ul > li > ul {
   background: var(--primary-5) !important;
   background-image: none !important;
   border: 1px solid var(--primary-9);
@@ -244,7 +242,29 @@ a {
   box-shadow: var(--shadow-01);
 }
 
-#desktopNavbar li ul .divider {
+#desktopNavbar li ul li a {
+  position: relative;
+  min-width: 140px;
+  font-weight: normal;
+  padding: 4px 0 4px 4px;
+}
+
+
+#desktopNavbar > ul > li > ul > li:first-child > a {
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+
+#desktopNavbar > ul > li > ul > li:last-child > a {
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+
+#desktopNavbar > ul > li > ul > li > a:hover {
+  background: var(--primary-1) !important;
+}
+
+#desktopNavbar > ul > li > ul > li.divider {
   border-top-color: var(--primary-8) !important;
 }
 
@@ -390,7 +410,7 @@ ul.filterList li:not(.selectedFilter):hover {
 #watched_folders_tab tr,
 #watched_folders_tab th,
 #watched_folders_tab td {
-  border: 1px solid var(--primary-2) !important;
+  border: 1px solid var(--primary-3) !important;
 }
 
 .icon16 {
@@ -716,13 +736,6 @@ td.statusBarSeparator {
 
 /* TOP MENU ITEMS
 ----------------------------------------------------------------------------------------------*/
-#desktopNavbar li ul li a {
-  position: relative;
-  min-width: 140px;
-  font-weight: normal;
-  padding: 4px 0 4px 4px;
-}
-
 .MyMenuIcon {
   margin-left: 0px;
 }

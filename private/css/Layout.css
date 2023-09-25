@@ -123,17 +123,7 @@ body {
 }
 
 #desktopNavbar ul li a {
-    /*padding: 6px 10px 6px 10px;*/
-    color: #333;
-    font-weight: normal;
-    /* Fix by Chris */
     padding: 2px 10px 6px 10px;
-}
-
-#desktopNavbar ul li a:hover {
-    color: #333;
-    /* Fix By Chris */
-    background-color: #fff;
 }
 
 #desktopNavbar ul li a.arrow-right, #desktopNavbar ul li a:hover.arrow-right {
@@ -169,7 +159,6 @@ body {
     left: 6px;
     width: 5px;
     height: 5px;
-    background: #555;
     overflow: hidden;
     line-height: 1px;
     font-size: 1px;
@@ -179,20 +168,10 @@ body {
     position: relative;
     /*padding: 1px 9px 1px 25px;*/
     min-width: 120px;
-    color: #3f3f3f;
     font-weight: normal;
     /* Fix By Chris */
     padding: 1px 10px 1px 20px;
     /* Reduce left padding */
-}
-
-#desktopNavbar li ul li a:hover {
-    background: #6C98D9;
-    color: #fff;
-}
-
-#desktopNavbar li ul li a:hover .check {
-    background: #fff;
 }
 
 #desktopNavbar li:hover ul,
